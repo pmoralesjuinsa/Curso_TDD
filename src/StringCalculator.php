@@ -34,4 +34,5 @@ class StringCalculator
 
         return array_filter($numbersArray);
     }
+
 }
