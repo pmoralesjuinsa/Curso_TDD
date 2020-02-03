@@ -19,7 +19,8 @@ class StringCalculator
 
         foreach($numbersArray as $number) {
             if($number < 0) {
-                throw new \Exception('negatives not allowed');
+                $message = "negatives not allowed\n$number";
+                throw new \Exception($message);
             }
             $total += $number;
         }
