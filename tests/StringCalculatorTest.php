@@ -63,13 +63,24 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
     }
 
     /** @test */
-    public function send_negative_number_return_exception()
+    public function send_negative_number_return_exception_message()
     {
         $calculator = new StringCalculator();
 
         $this->expectExceptionMessage("negatives not allowed\n-5");
 
         $calculator->sum("-5");
+
+    }
+
+    /** @test */
+    public function send_negative_numbers_return_exception_and_numbers_message()
+    {
+        $calculator = new StringCalculator();
+
+        $this->expectExceptionMessage("negatives not allowed\n-5\n-7");
+
+        $calculator->sum("-5,-7");
 
     }
 
