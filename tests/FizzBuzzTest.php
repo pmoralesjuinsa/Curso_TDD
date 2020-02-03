@@ -38,7 +38,7 @@ class FizzBuzzTest extends TestCase
     /** @test */
     public function send_three_return_fish()
     {
-        $result = $this->fizzbuzz->passNumber("a");
+        $result = $this->fizzbuzz->passNumber(3);
 
         $this->assertEquals("Fizz", $result);
 
