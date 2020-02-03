@@ -94,6 +94,16 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
 
     }
 
+    /** @test */
+    public function send_multiple_chars_as_delimiter_and_goes_fine()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("//,,,,\n1,,,,1000,,,,5");
+
+        $this->assertEquals(6, $result);
+
+    }
+
 }
 
 

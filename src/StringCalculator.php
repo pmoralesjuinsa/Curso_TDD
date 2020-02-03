@@ -45,7 +45,7 @@ class StringCalculator
      */
     public function getDelimiterAndNumbersArray($numbers)
     {
-        if(preg_match('#^\/\/(.)(\\n)([0-9].*)#i', $numbers, $matches)) {
+        if(preg_match('#^\/\/(.+)(\\n)([0-9].*)#i', $numbers, $matches)) {
             $result['numbers'] = $matches[3];
             $result['delimiter'] = $matches[1];
         } else {
