@@ -23,7 +23,7 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $calculator = new StringCalculator();
         $result = $calculator->Add("");
 
-        $this->assertEquals(0, "");
+        $this->assertEquals(0, $result);
     }
 
 }
