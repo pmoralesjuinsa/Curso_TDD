@@ -35,6 +35,15 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(2, $result);
     }
 
+    /** @test */
+    public function send_one_two_four_ten_return_seventeen()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("1,2,4,10");
+
+        $this->assertEquals(17, $result);
+    }
+
 }
 
 
