@@ -12,7 +12,7 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
     public function send_string_numbers_separated_commas_and_return_their_sum()
     {
         $calculator = new StringCalculator();
-        $result = $calculator->Add("1,2");
+        $result = $calculator->sum("1,2");
 
         $this->assertEquals(3, $result);
     }
@@ -21,7 +21,7 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
     public function send_empty_string_and_return_zero()
     {
         $calculator = new StringCalculator();
-        $result = $calculator->Add("");
+        $result = $calculator->sum("");
 
         $this->assertEquals(0, $result);
     }
