@@ -6,6 +6,7 @@ namespace TDD\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Src\FizzBuzz;
+use Src\DatabaseFake;
 
 class FizzBuzzTest extends TestCase
 {
@@ -14,7 +15,7 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->fizzbuzz = new FizzBuzz();
+        $this->fizzbuzz = new FizzBuzz(new DatabaseFake());
     }
 
     /** @test */

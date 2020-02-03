@@ -14,9 +14,9 @@ class FizzBuzz
             throw new \Exception("el valor no es un entero");
         }
 
-        if($number%self::FIZZ_NUMBER === 0) {
-            return "Fizz";
-        }
+//        if($number%self::FIZZ_NUMBER === 0) {
+//            return "Fizz";
+//        }
 
         return $number;
     }
