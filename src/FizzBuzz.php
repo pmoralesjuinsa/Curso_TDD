@@ -9,13 +9,12 @@ class FizzBuzz
 
     public function passNumber($number)
     {
-        if(!is_int($number)) {
-            throw new \Exception("el valor no es un entero");
-        }
+        $this->checkNumberIsInteger($number);
 
         return $this->checkFizzNumber($number);
 
     }
+
 
     public function checkFizzNumber($number)
     {
@@ -26,5 +25,16 @@ class FizzBuzz
         }
 
         return $result;
+    }
+
+    /**
+     * @param $number
+     * @throws \Exception
+     */
+    public function checkNumberIsInteger($number): void
+    {
+        if (!is_int($number)) {
+            throw new \Exception("el valor no es un entero");
+        }
     }
 }
