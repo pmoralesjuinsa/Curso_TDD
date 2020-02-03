@@ -53,6 +53,16 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(6, $result);
     }
 
+    /** @test */
+    public function send_custom_delimiter_one_two_three_four_and_return_ten()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("1;2;3;4");
+
+        $this->assertEquals(10, $result);
+    }
+
+
 }
 
 
