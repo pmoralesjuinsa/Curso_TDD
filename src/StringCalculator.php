@@ -14,16 +14,24 @@ class StringCalculator
             $numbers = 0;
         }
 
-        $numbersArray = explode(",", $numbers);
+        $numbersArray = $this->getNumbers($numbers);
 
-        if(!empty($numbersArray)) {
-
-            foreach($numbersArray as $number) {
-                $total += $number;
-            }
-
+        foreach($numbersArray as $number) {
+            $total += $number;
         }
 
         return $total;
+    }
+
+    /**
+     * @param $numbers
+     * @return array
+     */
+    public function getNumbers($numbers)
+    {
+        $numbersCleaned = str_replace("\n", ",", $numbers);
+        $numbersArray = explode(",", $numbersCleaned);
+
+        return array_filter($numbersArray);
     }
 }
