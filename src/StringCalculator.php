@@ -29,6 +29,7 @@ class StringCalculator
 
     /**
      * @param $numbers
+     * @param $delimiter
      * @return array
      */
     public function getNumbers($numbers, $delimiter)
@@ -45,16 +46,37 @@ class StringCalculator
      */
     public function getDelimiterAndNumbersArray($numbers)
     {
-        if(preg_match('#^\/\/((?:\[(?:.+)\])|(?:.))(\\n)([0-9].*)#', $numbers, $matches)) {
-            $result['numbers'] = $matches[3];
-            $result['delimiter'] = trim($matches[1],"[]");
+        if(preg_match('#^\/\/((?:\[(?:.+)\]){1,}|(?:.))(\\n)([0-9].*)#', $numbers, $matches)) {
+            $result['numbers'] = $this->setDefaultDelimiter($matches[3], $matches[1]);
         } else {
             $result['numbers'] = $numbers;
-            $result['delimiter'] = ",";
         }
+
+        $result['delimiter'] = ",";
 
         return $result;
     }
+
+    /**
+     * @param $numbersString
+     * @param $delimiters
+     * @return string
+     */
+    public function setDefaultDelimiter($numbersString, $delimiters)
+    {
+        $numbersStringCleaned = $numbersString;
+
+        if(preg_match_all('#\[(.*?)\]#', $delimiters, $matches)) {
+            foreach($matches as $match) {
+                $numbersStringCleaned = str_replace($match, ",", $numbersStringCleaned);
+            }
+        } else {
+            $numbersStringCleaned = str_replace($delimiters, ",", $numbersStringCleaned);
+        }
+
+        return $numbersStringCleaned;
+    }
+
 
     public function checkNegativeNumbers($numbersArray)
     {
