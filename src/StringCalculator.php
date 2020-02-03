@@ -19,7 +19,9 @@ class StringCalculator
         $this->checkNegativeNumbers($numbersArray);
 
         foreach($numbersArray as $number) {
-            $total += $number;
+            if($number < 1000) {
+                $total += $number;
+            }
         }
 
         return $total;
