@@ -6,7 +6,7 @@ namespace Src;
 
 class StringCalculator
 {
-    public function sum($numbers)
+    public function sum($numbers, $delimiter = ",")
     {
         $total = 0;
 
@@ -14,7 +14,7 @@ class StringCalculator
             $numbers = 0;
         }
 
-        $numbersArray = $this->getNumbers($numbers);
+        $numbersArray = $this->getNumbers($numbers, $delimiter);
 
         foreach($numbersArray as $number) {
             $total += $number;
@@ -27,11 +27,12 @@ class StringCalculator
      * @param $numbers
      * @return array
      */
-    public function getNumbers($numbers)
+    public function getNumbers($numbers, $delimiter)
     {
-        $numbersCleaned = str_replace("\n", ",", $numbers);
-        $numbersArray = explode(",", $numbersCleaned);
+        $numbersCleaned = str_replace("\n", $delimiter, $numbers);
+        $numbersArray = explode($delimiter, $numbersCleaned);
 
         return array_filter($numbersArray);
     }
+
 }
