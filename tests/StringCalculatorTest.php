@@ -84,6 +84,16 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
 
     }
 
+    /** @test */
+    public function send_one_and_one_thousand_and_return_one()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("1,1000");
+
+        $this->assertEquals(1, $result);
+
+    }
+
 }
 
 
