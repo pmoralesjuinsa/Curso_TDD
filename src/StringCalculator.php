@@ -64,7 +64,17 @@ class StringCalculator
      */
     public function setDefaultDelimiter($numbersString, $delimiters)
     {
-        return str_replace($delimiters, ",", $numbersString);
+        $numbersStringCleaned = $numbersString;
+
+        if(preg_match_all('#\[(.*?)\]#', $delimiters, $matches)) {
+            foreach($matches as $match) {
+                $numbersStringCleaned = str_replace($match, ",", $numbersStringCleaned);
+            }
+        } else {
+            $numbersStringCleaned = str_replace($delimiters, ",", $numbersStringCleaned);
+        }
+
+        return $numbersStringCleaned;
     }
 
 
