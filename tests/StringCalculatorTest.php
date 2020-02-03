@@ -26,6 +26,15 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(0, $result);
     }
 
+    /** @test */
+    public function send_string_two_return_two()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("2");
+
+        $this->assertEquals(2, $result);
+    }
+
 }
 
 
