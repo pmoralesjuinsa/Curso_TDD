@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="991d8e9e-87e5-4e0c-aaab-7f59f2672bb5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../TDD_StringCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TDD_StringCalculator/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TDD_StringCalculator/src/StringCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/../TDD_StringCalculator/src/StringCalculator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580717381276</updated>
-      <workItem from="1580717382700" duration="2573000" />
+      <workItem from="1580717382700" duration="2818000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio Proyecto">
       <created>1580720212929</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580720212929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="RED: Send 1,2 as string and fail return 3 as int">
+      <created>1580720410893</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580720410893</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +130,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inicio Proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicio Proyecto" />
+    <MESSAGE value="RED: Send 1,2 as string and fail return 3 as int" />
+    <option name="LAST_COMMIT_MESSAGE" value="RED: Send 1,2 as string and fail return 3 as int" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2618" y="202" width="824" height="684" key="#CLI_Interpreters" timestamp="1580719632569">
@@ -145,10 +154,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2506" y="255" width="1059" height="578" key="#phpunit.xml/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580719227392" />
-    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2" timestamp="1580720212737">
+    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2" timestamp="1580720410792">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720212737" />
+    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720410792" />
     <state x="2721" y="432" width="307" height="223" key="DockerComposeFileDialog" timestamp="1580719204229">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -157,22 +166,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2658" y="302" width="447" height="498" key="FileChooserDialogImpl/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720127243" />
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1580720325764">
+    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1580720569107">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720325764" />
-    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1580720325764">
+    <state width="1874" height="284" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720569107" />
+    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1580720569106">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.center/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720325764" />
-    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1580720325764">
+    <state width="1874" height="284" key="GridCell.Tab.0.center/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720569106" />
+    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1580720569106">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.left/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720325764" />
-    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1580720325764">
+    <state width="1874" height="284" key="GridCell.Tab.0.left/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720569106" />
+    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1580720569106">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720325764" />
+    <state width="1874" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580720569106" />
     <state x="2558" y="353" width="633" height="380" key="NewPhpClassDialog" timestamp="1580718493496">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

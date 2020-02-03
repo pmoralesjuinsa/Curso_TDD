@@ -15,6 +15,6 @@ class StringCalculator
                 $total += $number;
             }
         }
-        return $numbers;
+        return $total;
     }
 }
