@@ -6,9 +6,9 @@ namespace Src;
 
 class DatabaseFake
 {
-    public function initConnection() {}
+    public static function initConnection() {}
 
-    public function getStringWhenThreeNumber()
+    public static function getStringWhenThreeNumber()
     {
         return "Fizz";
     }

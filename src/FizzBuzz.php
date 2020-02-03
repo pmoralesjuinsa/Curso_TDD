@@ -3,7 +3,6 @@
 
 namespace Src;
 
-
 class FizzBuzz
 {
     CONST FIZZ_NUMBER = 3;
@@ -14,9 +13,9 @@ class FizzBuzz
             throw new \Exception("el valor no es un entero");
         }
 
-//        if($number%self::FIZZ_NUMBER === 0) {
-//            return "Fizz";
-//        }
+        if($number%self::FIZZ_NUMBER === 0) {
+            return DatabaseFake::getStringWhenThreeNumber();
+        }
 
         return $number;
     }
