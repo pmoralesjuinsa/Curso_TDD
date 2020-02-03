@@ -14,7 +14,8 @@ class StringCalculator
             $numbers = 0;
         }
 
-        $numbersArray = $this->getNumbers($numbers, $delimiter);
+        $delimiterAndNumbersArray = $this->getDelimiterAndNumbersArray($numbers);
+        $numbersArray = $this->getNumbers($delimiterAndNumbersArray['numbers'], $delimiterAndNumbersArray['delimiter']);
 
         foreach($numbersArray as $number) {
             $total += $number;
@@ -33,6 +34,23 @@ class StringCalculator
         $numbersArray = explode($delimiter, $numbersCleaned);
 
         return array_filter($numbersArray);
+    }
+
+    /**
+     * @param $numbers
+     * @return array
+     */
+    public function getDelimiterAndNumbersArray($numbers)
+    {
+        if(preg_match('#^\/\/(.)(\\n)([0-9].*)#i', $numbers, $matches)) {
+            $result['numbers'] = $matches[3];
+            $result['delimiter'] = $matches[1];
+        } else {
+            $result['numbers'] = $numbers;
+            $result['delimiter'] = ",";
+        }
+
+        return $result;
     }
 
 }
