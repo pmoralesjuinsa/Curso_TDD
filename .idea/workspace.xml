@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TDD_StringCalculator" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -106,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580717381276</updated>
-      <workItem from="1580717382700" duration="4419000" />
+      <workItem from="1580717382700" duration="4574000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio Proyecto">
       <created>1580720212929</created>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580722107437</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="BLUE: Refactor sum and created a getNumbers method to clean and return array numbers or single number">
+      <created>1580722175259</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580722175259</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,10 +259,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2506" y="255" width="1059" height="578" key="#phpunit.xml/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580719227392" />
-    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2" timestamp="1580722150439">
+    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2" timestamp="1580722226522">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722150439" />
+    <state x="2405" y="138" width="940" height="810" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722226522" />
     <state x="2721" y="432" width="307" height="223" key="DockerComposeFileDialog" timestamp="1580719204229">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -268,29 +275,29 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2206" y="127" width="1328" height="841" key="FileDocumentManager.FileCacheConflict/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580721056123" />
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1580722064078">
+    <state width="937" height="284" key="GridCell.Tab.0.bottom" timestamp="1580722325988">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722064078" />
-    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1580722064078">
+    <state width="937" height="284" key="GridCell.Tab.0.bottom/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722325988" />
+    <state width="937" height="284" key="GridCell.Tab.0.center" timestamp="1580722325988">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.center/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722064078" />
-    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1580722064078">
+    <state width="937" height="284" key="GridCell.Tab.0.center/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722325988" />
+    <state width="937" height="284" key="GridCell.Tab.0.left" timestamp="1580722325988">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.left/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722064078" />
-    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1580722064078">
+    <state width="937" height="284" key="GridCell.Tab.0.left/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722325988" />
+    <state width="937" height="284" key="GridCell.Tab.0.right" timestamp="1580722325988">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722064078" />
+    <state width="937" height="284" key="GridCell.Tab.0.right/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722325988" />
     <state x="2558" y="353" width="633" height="380" key="NewPhpClassDialog" timestamp="1580718493496">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2558" y="353" width="633" height="380" key="NewPhpClassDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580718493496" />
-    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1580718614067">
+    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1580722279699">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580718614067" />
+    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580722279699" />
   </component>
 </project>
