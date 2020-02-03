@@ -62,6 +62,14 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(10, $result);
     }
 
+    /** @test */
+    public function send_negative_number_return_exception()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("-5");
+
+        $this->expectException("negatives not allowed");
+    }
 
 }
 

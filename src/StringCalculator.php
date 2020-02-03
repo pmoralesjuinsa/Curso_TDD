@@ -18,6 +18,9 @@ class StringCalculator
         $numbersArray = $this->getNumbers($delimiterAndNumbersArray['numbers'], $delimiterAndNumbersArray['delimiter']);
 
         foreach($numbersArray as $number) {
+            if($number < 0) {
+                throw new \Exception('negatives not allowed');
+            }
             $total += $number;
         }
 
