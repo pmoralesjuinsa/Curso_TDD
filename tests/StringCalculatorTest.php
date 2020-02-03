@@ -44,6 +44,15 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(17, $result);
     }
 
+    /** @test */
+    public function send_one_line_break_as_delimiter_two_three_and_return_six()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->sum("1\n2,3");
+
+        $this->assertEquals(0, $result);
+    }
+
 }
 
 
