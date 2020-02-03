@@ -13,10 +13,18 @@ class FizzBuzz
             throw new \Exception("el valor no es un entero");
         }
 
+        return $this->checkFizzNumber($number);
+
+    }
+
+    public function checkFizzNumber($number)
+    {
+        $result = $number;
+
         if($number%self::FIZZ_NUMBER === 0) {
-            return DatabaseFake::getStringWhenThreeNumber();
+            $result = DatabaseFake::getStringWhenThreeNumber();
         }
 
-        return $number;
+        return $result;
     }
 }
