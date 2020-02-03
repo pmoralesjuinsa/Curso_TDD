@@ -6,6 +6,7 @@ namespace TDD\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Src\FizzBuzz;
+use Src\DatabaseFake;
 
 class FizzBuzzTest extends TestCase
 {
@@ -14,7 +15,7 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->fizzbuzz = new FizzBuzz();
+        $this->fizzbuzz = new FizzBuzz(new DatabaseFake());
     }
 
     /** @test */
@@ -32,6 +33,15 @@ class FizzBuzzTest extends TestCase
         $this->expectExceptionMessage("el valor no es un entero");
 
         $this->fizzbuzz->passNumber("a");
+
+    }
+
+    /** @test */
+    public function send_three_return_fish()
+    {
+        $result = $this->fizzbuzz->passNumber(3);
+
+        $this->assertEquals("Fizz", $result);
 
     }
 
