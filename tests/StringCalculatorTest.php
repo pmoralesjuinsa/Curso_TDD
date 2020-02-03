@@ -17,6 +17,14 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(3, $result);
     }
 
+    /** @test */
+    public function send_empty_string_and_return_zero()
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->Add("");
+
+        $this->assertEquals(0, "");
+    }
 
 }
 
