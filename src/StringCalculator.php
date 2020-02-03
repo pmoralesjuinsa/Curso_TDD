@@ -16,12 +16,9 @@ class StringCalculator
 
         $delimiterAndNumbersArray = $this->getDelimiterAndNumbersArray($numbers);
         $numbersArray = $this->getNumbers($delimiterAndNumbersArray['numbers'], $delimiterAndNumbersArray['delimiter']);
+        $this->checkNegativeNumbers($numbersArray);
 
         foreach($numbersArray as $number) {
-            if($number < 0) {
-                $message = "negatives not allowed\n$number";
-                throw new \Exception($message);
-            }
             $total += $number;
         }
 
@@ -55,6 +52,23 @@ class StringCalculator
         }
 
         return $result;
+    }
+
+    public function checkNegativeNumbers($numbersArray)
+    {
+        $message = '';
+        foreach($numbersArray as $number) {
+            if($number < 0) {
+                if($message == '') {
+                    $message .= "negatives not allowed";
+                }
+                $message .= "\n$number";
+            }
+        }
+
+        if($message != '') {
+            throw new \Exception($message);
+        }
     }
 
 }
