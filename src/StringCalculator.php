@@ -14,7 +14,8 @@ class StringCalculator
             $numbers = 0;
         }
 
-        $numbersArray = explode(",", $numbers);
+        $numbersCleaned = str_replace("\n", ",", $numbers);
+        $numbersArray = explode(",", $numbersCleaned);
 
         if(!empty($numbersArray)) {
 

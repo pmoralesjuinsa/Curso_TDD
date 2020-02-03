@@ -50,7 +50,7 @@ class StringCalculatorTest extends \PHPUnit\Framework\TestCase
         $calculator = new StringCalculator();
         $result = $calculator->sum("1\n2,3");
 
-        $this->assertEquals(0, $result);
+        $this->assertEquals(6, $result);
     }
 
 }
