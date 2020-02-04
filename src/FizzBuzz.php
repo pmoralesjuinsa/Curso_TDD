@@ -20,12 +20,12 @@ class FizzBuzz
     {
         $this->checkNumberIsInteger($number);
 
-        return $this->checkFizzNumber($number);
+        return $this->checkFizzBuzzNumber($number);
 
     }
 
 
-    public function checkFizzNumber($number)
+    public function checkFizzBuzzNumber($number)
     {
         $result = '';
 
