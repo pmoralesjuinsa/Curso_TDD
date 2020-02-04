@@ -7,7 +7,6 @@ class FizzBuzz
 {
     CONST FIZZ_NUMBER = 3;
     CONST BUZZ_NUMBER = 5;
-    CONST FIZZBUZZ_NUMBER = 15;
 
     protected $databaseFake;
 
