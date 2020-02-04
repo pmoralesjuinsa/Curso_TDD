@@ -28,11 +28,11 @@ class FizzBuzz
     {
         $result = $number;
 
-        if($this->isMultipleOfThree($number)) {
+        if($this->isMultiple($number, self::FIZZ_NUMBER)) {
             $result = $this->databaseFake->getStringWhenThreeNumber();
         }
 
-        if($this->isMultipleOfFive($number)) {
+        if($this->isMultiple($number, self::BUZZ_NUMBER)) {
             $result = "Buzz";
         }
 
@@ -50,22 +50,15 @@ class FizzBuzz
         }
     }
 
-    /**
-     * @param $number
-     * @return bool
-     */
-    public function isMultipleOfThree($number): bool
-    {
-        return $number % self::FIZZ_NUMBER === 0;
-    }
 
     /**
      * @param $number
+     * * @param $multipler
      * @return bool
      */
-    public function isMultipleOfFive($number): bool
+    public function isMultiple($number, $multipler): bool
     {
-        return $number % self::BUZZ_NUMBER === 0;
+        return $number % $multipler === 0;
     }
 
 }
