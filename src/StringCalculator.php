@@ -6,7 +6,7 @@ namespace Src;
 
 class StringCalculator
 {
-    public function sum($numbers, $delimiter = ",")
+    public function sum($numbers)
     {
         $total = 0;
 
