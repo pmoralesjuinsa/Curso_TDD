@@ -15,15 +15,11 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->setUpWithStub();
+        $this->setUpDefault();
     }
 
     public function setUpWithStub() : void
     {
-//        $databaseStub = new class() {
-//            function initConnection() {}
-//            function getStringWhenThreeNumber() {}
-//        };
 
         $stubDB = $this->createStub(DatabaseFake::class);
         $stubDB->method('getStringWhenThreeNumber')->willReturn('Fizz');
@@ -32,6 +28,17 @@ class FizzBuzzTest extends TestCase
     }
 
     public function setUpWithFake() : void
+    {
+        $databaseStub = new class() {
+            function initConnection() {}
+            function getStringWhenThreeNumber() { return "Fizz"; }
+            function getStringWhenFiveNumber() { return "Buzz"; }
+        };
+
+        $this->fizzbuzz = new FizzBuzz($databaseStub);
+    }
+
+    public function setUpDefault() : void
     {
         $this->fizzbuzz = new FizzBuzz(new DatabaseFake());
     }
@@ -77,18 +84,41 @@ class FizzBuzzTest extends TestCase
 
     }
 
+//    /** @test */
+//    public function pruebas()
+//    {
+////        $databaseStub = new class() {
+////            function initConnection() {}
+////            function getStringWhenThreeNumber() {}
+////        };
+//
+//        $subject = new FizzBuzzWrapper(new DatabaseFake());
+//
+//        $result = $subject->passNumber(3);
+//
+//        $observer = $this->prophesize(DatabaseFake::class);
+//
+//        $result = $subject->passNumber(3);
+//
+//        $observer->getStringWhenThreeNumber()->shouldBeCalled();
+//
+//        $result = $subject->passNumber(3);
+//
+//        $subject->attach($observer->reveal());
+//
+//        $result = $subject->passNumber(3);
+//
+//        $subject->exposeDatabaseFakeProperty()->getStringWhenThreeNumber();
+//
+//        $result = $subject->passNumber(3);
+//    }
+
     /** @test */
-    public function pruebas()
+    public function send_five_return_buzz()
     {
-        $subject = new FizzBuzzWrapper(new DatabaseFake());
+        $result = $this->fizzbuzz->passNumber(5);
 
-        $observer = $this->prophesize(DatabaseFake::class);
-
-        $observer->getStringWhenThreeNumber()->shouldBeCalled();
-
-        $subject->attach($observer->reveal());
-
-        $subject->exposeDatabaseFakeProperty()->getStringWhenThreeNumber();
+        $this->assertSame('Buzz', $result);
     }
 
 }

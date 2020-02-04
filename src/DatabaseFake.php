@@ -12,4 +12,9 @@ class DatabaseFake
     {
         return "Fizz";
     }
+
+    public function getStringWhenFiveNumber()
+    {
+        return "Buzz";
+    }
 }
