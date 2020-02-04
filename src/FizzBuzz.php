@@ -43,4 +43,5 @@ class FizzBuzz
             throw new \Exception("el valor no es un entero");
         }
     }
+
 }

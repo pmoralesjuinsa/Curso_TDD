@@ -15,11 +15,16 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->setUpWithFake();
+        $this->setUpWithStub();
     }
 
     public function setUpWithStub() : void
     {
+//        $databaseStub = new class() {
+//            function initConnection() {}
+//            function getStringWhenThreeNumber() {}
+//        };
+
         $stubDB = $this->createStub(DatabaseFake::class);
         $stubDB->method('getStringWhenThreeNumber')->willReturn('Fizz');
 
@@ -61,16 +66,6 @@ class FizzBuzzTest extends TestCase
     /** @test */
     public function send_three_return_fish_with_spy()
     {
-
-//        $observer = $this->prophesize(DatabaseFake::class);
-//
-//        $observer->getStringWhenThreeNumber()->shouldBeCalled();
-//
-//        $this->fizzbuzz->attach($observer->reveal());
-//
-//        $this->fizzbuzz->passNumber(3);
-
-
         $stub = $this->createMock(DatabaseFake::class);
 
         $stub->method('getStringWhenThreeNumber')
@@ -82,4 +77,33 @@ class FizzBuzzTest extends TestCase
 
     }
 
+    /** @test */
+    public function pruebas()
+    {
+        $subject = new FizzBuzzWrapper(new DatabaseFake());
+
+        $observer = $this->prophesize(DatabaseFake::class);
+
+        $observer->getStringWhenThreeNumber()->shouldBeCalled();
+
+        $subject->attach($observer->reveal());
+
+        $subject->exposeDatabaseFakeProperty()->getStringWhenThreeNumber();
+    }
+
+}
+
+class FizzBuzzWrapper extends FizzBuzz
+{
+    protected $observers = [];
+
+    public function attach(DatabaseFake $observer)
+    {
+        $this->observers[] = $observer;
+    }
+
+    public function exposeDatabaseFakeProperty()
+    {
+        return $this->databaseFake;
+    }
 }
