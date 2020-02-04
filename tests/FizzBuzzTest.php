@@ -58,4 +58,20 @@ class FizzBuzzTest extends TestCase
 
     }
 
+    /** @test */
+    public function send_three_return_fish_with_spy()
+    {
+        $mock = $this->getMockBuilder(DatabaseFake::class)
+            ->getMock();
+
+        $mock->expects($this->exactly(1))
+            ->method('getStringWhenThreeNumber')
+            ->with(
+                $this->equalTo(3)
+            );
+
+        $this->assertSame('Fizz', $mock->getStringWhenThreeNumber);
+
+    }
+
 }
