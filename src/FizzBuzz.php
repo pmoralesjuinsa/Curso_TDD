@@ -28,13 +28,21 @@ class FizzBuzz
     {
         $result = $number;
 
-        if($this->isMultiple($number, self::FIZZ_NUMBER)) {
-            $result = $this->databaseFake->getStringWhenThreeNumber();
-        }
+        $result = $this->filterNumberResultIfMultiple(
+            $number,
+            self::FIZZ_NUMBER,
+            $this->databaseFake,
+            'getStringWhenThreeNumber',
+            $result
+        );
 
-        if($this->isMultiple($number, self::BUZZ_NUMBER)) {
-            $result = "Buzz";
-        }
+        $result = $this->filterNumberResultIfMultiple(
+            $number,
+            self::BUZZ_NUMBER,
+            $this->databaseFake,
+            'getStringWhenFiveNumber',
+            $result
+        );
 
         return $result;
     }
@@ -59,6 +67,23 @@ class FizzBuzz
     public function isMultiple($number, $multipler): bool
     {
         return $number % $multipler === 0;
+    }
+
+    /**
+     * @param $number
+     * @param $multipler
+     * @param $database
+     * @param $funct
+     * @param $result
+     * @return mixed
+     */
+    public function filterNumberResultIfMultiple($number, $multipler, $database, $funct, $result)
+    {
+        if ($this->isMultiple($number, $multipler)) {
+            $result = $database->$funct();
+        }
+
+        return $result;
     }
 
 }

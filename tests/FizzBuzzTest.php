@@ -15,7 +15,7 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->setUpWithStub();
+        $this->setUpWithFake();
     }
 
     public function setUpWithStub() : void
@@ -80,13 +80,22 @@ class FizzBuzzTest extends TestCase
 //    /** @test */
 //    public function pruebas()
 //    {
+////        $databaseStub = new class() {
+////            function initConnection() {}
+////            function getStringWhenThreeNumber() {}
+////        };
+//
 //        $subject = new FizzBuzzWrapper(new DatabaseFake());
 //
 //        $result = $subject->passNumber(3);
 //
 //        $observer = $this->prophesize(DatabaseFake::class);
 //
+//        $result = $subject->passNumber(3);
+//
 //        $observer->getStringWhenThreeNumber()->shouldBeCalled();
+//
+//        $result = $subject->passNumber(3);
 //
 //        $subject->attach($observer->reveal());
 //
