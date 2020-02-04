@@ -15,6 +15,19 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
+        $this->setUpWithStub();
+    }
+
+    public function setUpWithStub() : void
+    {
+        $stubDB = $this->createStub(DatabaseFake::class);
+        $stubDB->method('getStringWhenThreeNumber')->willReturn('Fizz');
+
+        $this->fizzbuzz = new FizzBuzz($stubDB);
+    }
+
+    public function setUpWithFake() : void
+    {
         $this->fizzbuzz = new FizzBuzz(new DatabaseFake());
     }
 
