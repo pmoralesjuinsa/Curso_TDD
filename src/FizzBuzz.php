@@ -28,11 +28,11 @@ class FizzBuzz
     {
         $result = $number;
 
-        if($number%self::FIZZ_NUMBER === 0) {
+        if($this->isMultipleOfThree($number)) {
             $result = $this->databaseFake->getStringWhenThreeNumber();
         }
 
-        if($number%self::BUZZ_NUMBER === 0) {
+        if($this->isMultipleOfFive($number)) {
             $result = "Buzz";
         }
 
@@ -48,6 +48,24 @@ class FizzBuzz
         if (!is_int($number)) {
             throw new \Exception("el valor no es un entero");
         }
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     */
+    public function isMultipleOfThree($number): bool
+    {
+        return $number % self::FIZZ_NUMBER === 0;
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     */
+    public function isMultipleOfFive($number): bool
+    {
+        return $number % self::BUZZ_NUMBER === 0;
     }
 
 }
