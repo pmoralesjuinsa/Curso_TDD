@@ -24,7 +24,7 @@ class FizzBuzz
     }
 
 
-    public function checkFizzBuzzNumber($number)
+    protected function checkFizzBuzzNumber($number)
     {
         $result = '';
 
@@ -51,7 +51,7 @@ class FizzBuzz
      * @param $number
      * @throws \Exception
      */
-    public function checkNumberIsInteger($number): void
+    protected function checkNumberIsInteger($number): void
     {
         if (!is_int($number)) {
             throw new \Exception("el valor no es un entero");
@@ -64,7 +64,7 @@ class FizzBuzz
      * * @param $multipler
      * @return bool
      */
-    public function isMultiple($number, $multipler): bool
+    protected function isMultiple($number, $multipler): bool
     {
         return $number % $multipler === 0;
     }
@@ -77,7 +77,7 @@ class FizzBuzz
      * @param $result
      * @return mixed
      */
-    public function filterNumberResultIfMultiple($number, $multipler, $database, $funct, $result)
+    protected function filterNumberResultIfMultiple($number, $multipler, $database, $funct, $result)
     {
         if ($this->isMultiple($number, $multipler)) {
             $result .= $database->$funct();
