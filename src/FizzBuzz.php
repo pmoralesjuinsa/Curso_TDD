@@ -19,14 +19,14 @@ class FizzBuzz
     {
         $this->checkNumberIsInteger($number);
 
-        return $this->checkFizzNumber($number);
+        return $this->checkFizzBuzzNumber($number);
 
     }
 
 
-    public function checkFizzNumber($number)
+    public function checkFizzBuzzNumber($number)
     {
-        $result = $number;
+        $result = '';
 
         $result = $this->filterNumberResultIfMultiple(
             $number,
@@ -44,7 +44,7 @@ class FizzBuzz
             $result
         );
 
-        return $result;
+        return (empty($result) ? $number : $result);
     }
 
     /**
@@ -80,7 +80,7 @@ class FizzBuzz
     public function filterNumberResultIfMultiple($number, $multipler, $database, $funct, $result)
     {
         if ($this->isMultiple($number, $multipler)) {
-            $result = $database->$funct();
+            $result .= $database->$funct();
         }
 
         return $result;
