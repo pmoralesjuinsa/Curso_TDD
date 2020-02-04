@@ -6,6 +6,8 @@ namespace Src;
 class FizzBuzz
 {
     CONST FIZZ_NUMBER = 3;
+    CONST BUZZ_NUMBER = 5;
+
     protected $databaseFake;
 
     public  function __construct($databaseFake)
@@ -28,6 +30,10 @@ class FizzBuzz
 
         if($number%self::FIZZ_NUMBER === 0) {
             $result = $this->databaseFake->getStringWhenThreeNumber();
+        }
+
+        if($number%self::BUZZ_NUMBER === 0) {
+            $result = "Buzz";
         }
 
         return $result;
