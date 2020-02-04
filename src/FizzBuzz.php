@@ -7,6 +7,7 @@ class FizzBuzz
 {
     CONST FIZZ_NUMBER = 3;
     CONST BUZZ_NUMBER = 5;
+    CONST FIZZBUZZ_NUMBER = 15;
 
     protected $databaseFake;
 
@@ -26,7 +27,7 @@ class FizzBuzz
 
     public function checkFizzNumber($number)
     {
-        $result = $number;
+        $result = '';
 
         $result = $this->filterNumberResultIfMultiple(
             $number,
@@ -44,7 +45,7 @@ class FizzBuzz
             $result
         );
 
-        return $result;
+        return (empty($result) ? $number : $result);
     }
 
     /**
@@ -80,7 +81,7 @@ class FizzBuzz
     public function filterNumberResultIfMultiple($number, $multipler, $database, $funct, $result)
     {
         if ($this->isMultiple($number, $multipler)) {
-            $result = $database->$funct();
+            $result .= $database->$funct();
         }
 
         return $result;
