@@ -15,15 +15,11 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->setUpWithFake();
+        $this->setUpDefault();
     }
 
     public function setUpWithStub() : void
     {
-//        $databaseStub = new class() {
-//            function initConnection() {}
-//            function getStringWhenThreeNumber() {}
-//        };
 
         $stubDB = $this->createStub(DatabaseFake::class);
         $stubDB->method('getStringWhenThreeNumber')->willReturn('Fizz');
@@ -32,6 +28,17 @@ class FizzBuzzTest extends TestCase
     }
 
     public function setUpWithFake() : void
+    {
+        $databaseStub = new class() {
+            function initConnection() {}
+            function getStringWhenThreeNumber() { return "Fizz"; }
+            function getStringWhenFiveNumber() { return "Buzz"; }
+        };
+
+        $this->fizzbuzz = new FizzBuzz($databaseStub);
+    }
+
+    public function setUpDefault() : void
     {
         $this->fizzbuzz = new FizzBuzz(new DatabaseFake());
     }
