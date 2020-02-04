@@ -121,6 +121,14 @@ class FizzBuzzTest extends TestCase
         $this->assertSame('Buzz', $result);
     }
 
+    /** @test */
+    public function send_fiveteen_return_fizzbuzz()
+    {
+        $result = $this->fizzbuzz->passNumber(15);
+
+        $this->assertSame('FizzBuzz', $result);
+    }
+
 }
 
 class FizzBuzzWrapper extends FizzBuzz
