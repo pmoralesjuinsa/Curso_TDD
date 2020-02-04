@@ -77,18 +77,32 @@ class FizzBuzzTest extends TestCase
 
     }
 
+//    /** @test */
+//    public function pruebas()
+//    {
+//        $subject = new FizzBuzzWrapper(new DatabaseFake());
+//
+//        $result = $subject->passNumber(3);
+//
+//        $observer = $this->prophesize(DatabaseFake::class);
+//
+//        $observer->getStringWhenThreeNumber()->shouldBeCalled();
+//
+//        $subject->attach($observer->reveal());
+//
+//        $result = $subject->passNumber(3);
+//
+//        $subject->exposeDatabaseFakeProperty()->getStringWhenThreeNumber();
+//
+//        $result = $subject->passNumber(3);
+//    }
+
     /** @test */
-    public function pruebas()
+    public function send_five_return_buzz()
     {
-        $subject = new FizzBuzzWrapper(new DatabaseFake());
+        $result = $this->fizzbuzz->passNumber(5);
 
-        $observer = $this->prophesize(DatabaseFake::class);
-
-        $observer->getStringWhenThreeNumber()->shouldBeCalled();
-
-        $subject->attach($observer->reveal());
-
-        $subject->exposeDatabaseFakeProperty()->getStringWhenThreeNumber();
+        $this->assertSame('Buzz', $result);
     }
 
 }
