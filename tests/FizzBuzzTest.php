@@ -15,7 +15,7 @@ class FizzBuzzTest extends TestCase
 
     public function setUp() : void
     {
-        $this->setUpWithStub();
+        $this->setUpWithFake();
     }
 
     public function setUpWithStub() : void
@@ -55,6 +55,30 @@ class FizzBuzzTest extends TestCase
         $result = $this->fizzbuzz->passNumber(3);
 
         $this->assertEquals("Fizz", $result);
+
+    }
+
+    /** @test */
+    public function send_three_return_fish_with_spy()
+    {
+
+//        $observer = $this->prophesize(DatabaseFake::class);
+//
+//        $observer->getStringWhenThreeNumber()->shouldBeCalled();
+//
+//        $this->fizzbuzz->attach($observer->reveal());
+//
+//        $this->fizzbuzz->passNumber(3);
+
+
+        $stub = $this->createMock(DatabaseFake::class);
+
+        $stub->method('getStringWhenThreeNumber')
+            ->willReturn('Fizz');
+
+        $result = $this->fizzbuzz->passNumber(3);
+
+        $this->assertSame($result, $stub->getStringWhenThreeNumber());
 
     }
 
