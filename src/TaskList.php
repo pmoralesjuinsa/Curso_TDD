@@ -6,9 +6,14 @@ namespace Src;
 
 class TaskList
 {
-    CONST JSON_FILENAME = "lists.json";
+    protected $database;
 
-    public function getLists()
+    function __construct($databaseFile)
+    {
+        $this->database = new \SQLite3($databaseFile);
+    }
+
+    public function getListCollection()
     {
 
     }

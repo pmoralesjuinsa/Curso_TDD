@@ -13,15 +13,18 @@ class TaskListTest extends TestCase
 
     public function setUp() : void
     {
-        $this->taskList = new TaskList();
+        $this->taskList = new TaskList("DbSqlLite.db");
     }
 
     /** @test */
-    public function get_lists()
+    public function get_empty_listcollection_with_stub()
     {
-        $lists = $this->taskList->getLists();
+        $taskListStub = $this->createStub(TaskList::class);
+        $taskListStub->method('getListCollection')->willReturn([]);
 
-        $this->assertSame(array(), $lists);
+        $listCollection = $taskListStub->getListCollection();
+
+        $this->assertSame(array(), $listCollection);
     }
 
 }
