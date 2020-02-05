@@ -22,6 +22,15 @@ class RomanNumeralTest extends TestCase
     {
         $convertedNumber = $this->romanNumeral->getRomanNumber(1);
 
-        $this->assertSame("i", $convertedNumber);
+        $this->assertSame("I", $convertedNumber);
     }
+
+    /** @test */
+    public function get_five_return_v()
+    {
+        $convertedNumber = $this->romanNumeral->getRomanNumber(5);
+
+        $this->assertSame("V", $convertedNumber);
+    }
+
 }

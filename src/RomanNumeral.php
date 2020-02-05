@@ -12,7 +12,11 @@ class RomanNumeral
         $letter = '';
 
         if($number == 1) {
-            $letter = "i";
+            $letter = "I";
+        }
+
+        if($number == 5) {
+            $letter == "V";
         }
 
         return $letter;
