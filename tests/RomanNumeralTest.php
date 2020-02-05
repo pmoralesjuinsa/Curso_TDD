@@ -36,9 +36,9 @@ class RomanNumeralTest extends TestCase
     /** @test */
     public function send_two_return_ii()
     {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(5);
+        $convertedNumber = $this->romanNumeral->getRomanNumber(2);
 
-        $this->assertSame("V", $convertedNumber);
+        $this->assertSame("II", $convertedNumber);
     }
 
 }
