@@ -15,6 +15,8 @@ class TaskList
 
     public function getListCollection()
     {
+        $listCollection = $this->database->query('SELECT * FROM lists');
 
+        return $listCollection->fetchArray();
     }
 }

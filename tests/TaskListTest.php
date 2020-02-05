@@ -13,7 +13,7 @@ class TaskListTest extends TestCase
 
     public function setUp() : void
     {
-        $this->taskList = new TaskList("DbSqlLite.db");
+        $this->taskList = new TaskList("src/Db/DbSqlLite.db");
     }
 
     /** @test */
@@ -25,6 +25,14 @@ class TaskListTest extends TestCase
         $listCollection = $taskListStub->getListCollection();
 
         $this->assertSame(array(), $listCollection);
+    }
+
+    /** @test */
+    public function get_empty_listcollection_from_sqlite_file()
+    {
+        $listCollection = $this->taskList->getListCollection();
+
+        $this->assertIsArray($listCollection);
     }
 
 }
