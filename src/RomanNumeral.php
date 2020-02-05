@@ -16,7 +16,7 @@ class RomanNumeral
         }
 
         if($number == 5) {
-            $letter == "V";
+            $letter = "V";
         }
 
         return $letter;
