@@ -13,7 +13,7 @@ class TaskListTest extends TestCase
 
     public function setUp() : void
     {
-        $this->taskList = new TaskList("src/Db/DbSqlLite.db");
+        $this->taskList = new TaskList();
     }
 
     /** @test */
