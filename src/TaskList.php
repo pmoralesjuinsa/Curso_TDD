@@ -18,13 +18,13 @@ class TaskList
     {
         $listCollection = $this->database->query('SELECT * FROM lists');
 
-        return $listCollection->fetchArray();
+        return $listCollection->fetchArray(\PDO::FETCH_OBJ);
     }
 
     public function getListByName($name)
     {
         $listCollection = $this->database->query("SELECT * FROM lists WHERE name = '$name'");
 
-        return $listCollection->fetchArray();
+        return $listCollection->fetchArray(\PDO::FETCH_OBJ);
     }
 }
