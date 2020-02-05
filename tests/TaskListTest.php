@@ -17,17 +17,6 @@ class TaskListTest extends TestCase
     }
 
     /** @test */
-    public function get_empty_listcollection_with_stub()
-    {
-        $taskListStub = $this->createStub(TaskList::class);
-        $taskListStub->method('getListCollection')->willReturn([]);
-
-        $listCollection = $taskListStub->getListCollection();
-
-        $this->assertSame(array(), $listCollection);
-    }
-
-    /** @test */
     public function get_empty_listcollection_from_sqlite_file()
     {
         $listCollection = $this->taskList->getListCollection();
