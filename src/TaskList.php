@@ -56,4 +56,13 @@ class TaskList
             throw new \Exception("Lista no encontrada");
         }
     }
+
+    public function deleteTaskListByName($taskName, $listName)
+    {
+        $list = $this->getListByName($listName);
+
+        $this->getExceptionIfListDoesntExists($list);
+
+        return $this->database->exec("DELETE FROM tasks WHERE name = '$taskName' and id_list = ". $list['id']);
+    }
 }

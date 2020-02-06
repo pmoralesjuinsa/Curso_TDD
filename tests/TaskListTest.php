@@ -68,19 +68,19 @@ class TaskListTest extends TestCase
     }
 
     /** @test */
+    public function delete_task_list_by_name_param()
+    {
+        $deletedTask = $this->taskList->deleteTaskListByName($this->nameTask, $this->nameList);
+
+        $this->assertTrue($deletedTask);
+    }
+
+    /** @test */
     public function delete_list_by_name_param_cosas()
     {
         $deleted = $this->taskList->deleteListByName($this->nameList);
 
         $this->assertTrue($deleted);
-    }
-
-    /** @test */
-    public function delete_task_list_by_name_param()
-    {
-        $deletedTask = $this->taskList->deleteTaskListByName($this->nameTask);
-
-        $this->assertTrue($deletedTask);
     }
 
 }
