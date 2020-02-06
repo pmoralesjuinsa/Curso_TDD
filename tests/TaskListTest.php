@@ -83,4 +83,19 @@ class TaskListTest extends TestCase
         $this->assertTrue($deleted);
     }
 
+    /** @test */
+    public function trace_function_add_task_to_list_by_name_param_mitarea()
+    {
+//        $taskListMock = $this->createMock(TaskList::class);
+        $taskListMock = $this->getMockBuilder(TaskList::class)
+            ->setMethods(['addTaskToList'])
+            ->getMock();
+
+        $taskListMock->expects($this->once())->method('getListByName');
+        $taskListMock->expects($this->once())->method('getExceptionIfListDoesntExists');
+
+        $taskListMock->addTaskToList($this->nameTask, $this->nameList);
+
+    }
+
 }
