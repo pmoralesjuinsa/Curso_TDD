@@ -41,10 +41,19 @@ class TaskList
     {
         $list = $this->getListByName($listName);
 
-        if(!$list) {
-            throw new \Exception("Lista no encontrada");
-        }
+        $this->getExceptionIfListDoesntExists($list);
 
         return $this->database->exec("INSERT INTO tasks (id_list, name) VALUES(".$list['id'].", '$taskName')");
+    }
+
+    /**
+     * @param array $list
+     * @throws \Exception
+     */
+    public function getExceptionIfListDoesntExists(array $list): void
+    {
+        if (!$list) {
+            throw new \Exception("Lista no encontrada");
+        }
     }
 }

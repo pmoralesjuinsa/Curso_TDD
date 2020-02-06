@@ -45,6 +45,21 @@ class TaskListTest extends TestCase
     }
 
     /** @test */
+    public function send_false_to_list_check_get_exception_message()
+    {
+        $this->expectExceptionMessage("Lista no encontrada");
+        $this->taskList->getExceptionIfListDoesntExists(false);
+    }
+
+    /** @test */
+    public function get_exception_list_by_name_param_no_exist()
+    {
+        $this->expectExceptionMessage("Lista no encontrada");
+
+        $this->taskList->getListByName("No existe");
+    }
+
+    /** @test */
     public function add_task_to_list_by_name_param_mitarea()
     {
         $added = $this->taskList->addTaskToList($this->nameTask, $this->nameList);
