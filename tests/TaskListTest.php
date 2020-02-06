@@ -11,6 +11,7 @@ class TaskListTest extends TestCase
 {
     protected $taskList;
     protected $nameList = "Cosas";
+    protected $nameTask = "mitarea";
 
     public function setUp() : void
     {
@@ -41,6 +42,14 @@ class TaskListTest extends TestCase
         $list = $this->taskList->getListByName($result['name']);
 
         $this->assertSame($result['name'], $list['name']);
+    }
+
+    /** @test */
+    public function add_task_to_list_by_name_param_mitarea()
+    {
+        $added = $this->taskList->addTaskToList($this->nameTask, $this->nameList);
+
+        $this->assertTrue($added);
     }
 
     /** @test */

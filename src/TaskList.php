@@ -37,4 +37,10 @@ class TaskList
     {
         return $this->database->exec("DELETE FROM lists WHERE name = '$name'");
     }
+
+    public function addTaskToList($taskName, $listName)
+    {
+
+//        return $this->database->exec("INSERT INTO task (name) VALUES('$name')");
+    }
 }
