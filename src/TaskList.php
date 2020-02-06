@@ -28,6 +28,11 @@ class TaskList
         return $listCollection->fetchArray(\PDO::FETCH_OBJ);
     }
 
+    public function addListByName($name)
+    {
+        return $this->database->exec("INSERT INTO lists (name) VALUES('$name')");
+    }
+
     public function deleteListByName($name)
     {
         return $this->database->exec("DELETE FROM lists WHERE name = '$name'");

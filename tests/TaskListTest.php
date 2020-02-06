@@ -10,6 +10,7 @@ use Src\TaskList;
 class TaskListTest extends TestCase
 {
     protected $taskList;
+    protected $nameList = "Cosas";
 
     public function setUp() : void
     {
@@ -25,27 +26,27 @@ class TaskListTest extends TestCase
     }
 
     /** @test */
+    public function add_list_by_name_param_cosas()
+    {
+        $added = $this->taskList->addListByName($this->nameList);
+
+        $this->assertTrue($added);
+    }
+
+    /** @test */
     public function get_list_by_name_param()
     {
-        $result['name'] = "Cosas";
+        $result['name'] = $this->nameList;
 
         $list = $this->taskList->getListByName($result['name']);
 
         $this->assertSame($result['name'], $list['name']);
     }
 
-//    /** @test */
-//    public function add_list_by_name_param_cosas()
-//    {
-//        $added = $this->taskList->addListByName("Cosas");
-//
-//        $this->assertTrue($added);
-//    }
-
     /** @test */
     public function delete_list_by_name_param_cosas()
     {
-        $deleted = $this->taskList->deleteListByName("Cosas");
+        $deleted = $this->taskList->deleteListByName($this->nameList);
 
         $this->assertTrue($deleted);
     }
