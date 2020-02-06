@@ -30,8 +30,6 @@ class TaskList
 
     public function deleteListByName($name)
     {
-        $listCollection = $this->database->query("DROP FROM lists WHERE name = '$name'");
-
-        return $listCollection->fetchArray(\PDO::FETCH_OBJ);
+        return $this->database->exec("DELETE FROM lists WHERE name = '$name'");
     }
 }

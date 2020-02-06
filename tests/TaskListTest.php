@@ -34,10 +34,18 @@ class TaskListTest extends TestCase
         $this->assertSame($result['name'], $list['name']);
     }
 
+//    /** @test */
+//    public function add_list_by_name_param_cosas()
+//    {
+//        $added = $this->taskList->addListByName("Cosas");
+//
+//        $this->assertTrue($added);
+//    }
+
     /** @test */
-    public function delete_list_by_name_param()
+    public function delete_list_by_name_param_cosas()
     {
-        $deleted = $this->taskList->deleteListByName("La otra");
+        $deleted = $this->taskList->deleteListByName("Cosas");
 
         $this->assertTrue($deleted);
     }
