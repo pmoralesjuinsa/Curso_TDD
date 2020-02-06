@@ -3,7 +3,6 @@
 
 namespace Src;
 
-
 class TaskList
 {
     protected $database;
@@ -36,5 +35,16 @@ class TaskList
     public function deleteListByName($name)
     {
         return $this->database->exec("DELETE FROM lists WHERE name = '$name'");
+    }
+
+    public function addTaskToList($taskName, $listName)
+    {
+        $list = $this->getListByName($listName);
+
+        if(!$list) {
+            throw new \Exception("Lista no encontrada");
+        }
+
+        return $this->database->exec("INSERT INTO tasks (id_list, name) VALUES(".$list['id'].", '$taskName')");
     }
 }
