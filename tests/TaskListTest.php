@@ -56,7 +56,7 @@ class TaskListTest extends TestCase
     {
         $this->expectExceptionMessage("Lista no encontrada");
 
-        $this->taskList->addTaskToList("Tarea", "No existe");
+        $this->taskList->addTaskToList($this->nameTask, "No existe");
     }
 
     /** @test */
@@ -65,6 +65,14 @@ class TaskListTest extends TestCase
         $added = $this->taskList->addTaskToList($this->nameTask, $this->nameList);
 
         $this->assertTrue($added);
+    }
+
+    /** @test */
+    public function delete_task_list_by_name_param()
+    {
+        $deletedTask = $this->taskList->deleteTaskListByName($this->nameTask, $this->nameList);
+
+        $this->assertTrue($deletedTask);
     }
 
     /** @test */
