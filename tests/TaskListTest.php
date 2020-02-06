@@ -31,7 +31,7 @@ class TaskListTest extends TestCase
 
         $list = $this->taskList->getListByName($result['name']);
 
-        $this->assertSame($result['name'], $list->name);
+        $this->assertSame($result['name'], $list['name']);
     }
 
 }
