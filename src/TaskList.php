@@ -50,7 +50,7 @@ class TaskList
      * @param array $list
      * @throws \Exception
      */
-    public function getExceptionIfListDoesntExists(array $list): void
+    public function getExceptionIfListDoesntExists($list): void
     {
         if (!$list) {
             throw new \Exception("Lista no encontrada");
