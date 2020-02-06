@@ -8,6 +8,8 @@ class RomanNumeral
 {
 
     protected $restNumber;
+    protected $romanLetters = ["V", "I"];
+    protected $modNumbers = [5, 1];
 
     public function getRomanNumber($number)
     {
@@ -39,16 +41,18 @@ class RomanNumeral
      */
     public function assignLetter($number, $letter): string
     {
-        if ($this->restNumber % 5 === 0 AND $this->restNumber > 0) {
-            $this->restNumber -= $number;
-            $letter .= "V";
-            $this->assignLetter($this->restNumber, $letter);
-        }
 
-        if ($this->restNumber % 1 === 0 AND $this->restNumber > 0) {
-            $this->restNumber -= $number;
-            $letter .= "I";
-            $this->assignLetter($this->restNumber, $letter);
+        if($this->restNumber > 0) {
+            $result = $this->restNumber % 5;
+            if ($result === 0) {
+                $this->restNumber -= $number;
+                $letter .= "V";
+                $letter = $this->assignLetter($this->restNumber, $letter);
+            } elseif($result <= $number) {
+                $letter .= "I";
+                $this->restNumber -= 1;
+                $letter = $this->assignLetter($this->restNumber, $letter);
+            }
         }
 
         return $letter;

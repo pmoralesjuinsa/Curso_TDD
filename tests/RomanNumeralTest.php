@@ -41,4 +41,13 @@ class RomanNumeralTest extends TestCase
         $this->assertSame("II", $convertedNumber);
     }
 
+    /** @test */
+    public function send_three_return_iii()
+    {
+        $convertedNumber = $this->romanNumeral->getRomanNumber(3);
+
+        $this->assertSame("III", $convertedNumber);
+    }
+
+
 }
