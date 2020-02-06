@@ -27,4 +27,9 @@ class TaskList
 
         return $listCollection->fetchArray(\PDO::FETCH_OBJ);
     }
+
+    public function deleteListByName($name)
+    {
+        return $this->database->exec("DELETE FROM lists WHERE name = '$name'");
+    }
 }
