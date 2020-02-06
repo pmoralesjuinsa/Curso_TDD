@@ -3,7 +3,6 @@
 
 namespace Src;
 
-
 class TaskList
 {
     protected $database;
@@ -40,7 +39,12 @@ class TaskList
 
     public function addTaskToList($taskName, $listName)
     {
+        $list = $this->getListByName($listName);
 
-//        return $this->database->exec("INSERT INTO task (name) VALUES('$name')");
+        if(!$list) {
+            throw new \Exception("Lista no encontrada");
+        }
+
+        return $this->database->exec("INSERT INTO tasks (id_list, name) VALUES(".$list['id'].", '$taskName')");
     }
 }
