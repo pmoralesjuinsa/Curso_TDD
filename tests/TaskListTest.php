@@ -48,11 +48,11 @@ class TaskListTest extends TestCase
     public function send_false_to_list_check_get_exception_message()
     {
         $this->expectExceptionMessage("Lista no encontrada");
-        $this->taskList->getExceptionIfListDoesntExists(false);
+        $this->taskList->getExceptionIfListDoesntExists([]);
     }
 
     /** @test */
-    public function get_exception_list_by_name_param_no_exist()
+    public function get_exception_list_getting_list_no_existing()
     {
         $this->expectExceptionMessage("Lista no encontrada");
 
