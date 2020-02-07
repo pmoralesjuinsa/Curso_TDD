@@ -22,4 +22,17 @@ class FizzBuzzChainTest extends TestCase
 
     }
 
+    /** @test */
+    public function send_a_return_exception()
+    {
+        $fizzBuzzChain = new FizzBuzzChain();
+
+        $number = "a";
+
+        $this->expectExceptionMessage("$number no es un número");
+
+        $fizzBuzzChain->passNumber($number);
+
+    }
+
 }
