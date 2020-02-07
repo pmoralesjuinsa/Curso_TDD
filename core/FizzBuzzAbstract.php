@@ -6,7 +6,7 @@ abstract class FizzBuzzAbstract implements FizzBuzzInterface
 
     protected $nextHandler;
 
-    public function __construct($handler = null)
+    public function __construct(FizzBuzzAbstract $handler = null)
     {
         $this->nextHandler = $handler;
     }

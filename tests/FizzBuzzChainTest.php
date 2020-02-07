@@ -6,6 +6,7 @@ namespace TDD\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Src\FizzBuzzChain;
+use Src\FizzBuzzChainFizz;
 
 
 class FizzBuzzChainTest extends TestCase
