@@ -16,7 +16,9 @@ class FizzBuzzChain
             return "Fizz";
         }
 
-        return $number;
+        $fizzBuzzChainNormal = new FizzBuzzChainNormal();
+
+        return $fizzBuzzChainNormal->handle($number);
     }
 
 }
