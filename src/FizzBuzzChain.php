@@ -12,7 +12,7 @@ class FizzBuzzChain
             throw new \Exception("$number no es un número");
         }
 
-        $fizzBuzzChains = new FizzBuzzChainFizz(new FizzBuzzChainNormal());
+        $fizzBuzzChains = new FizzBuzzChainBuzz(new FizzBuzzChainFizz(new FizzBuzzChainNormal()));
 
         return $fizzBuzzChains->runHandlers($number);
     }

@@ -16,7 +16,7 @@ abstract class FizzBuzzAbstract implements FizzBuzzInterface
         $processed = $this->handle($number);
 
         if ($processed === null && $this->nextHandler !== null) {
-            $processed = $this->nextHandler->handle($number);
+            $processed = $this->nextHandler->runHandlers($number);
         }
 
         return $processed;
