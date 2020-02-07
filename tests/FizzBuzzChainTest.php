@@ -79,4 +79,12 @@ class FizzBuzzChainTest extends TestCase
         $this->assertEquals("Buzz", $result);
     }
 
+    /** @test */
+    public function send_thirty_return_buzz()
+    {
+        $result = $this->fizzBuzzChain->passNumber(30);
+
+        $this->assertEquals("FizzBuzz", $result);
+    }
+
 }
