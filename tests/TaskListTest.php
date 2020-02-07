@@ -83,27 +83,27 @@ class TaskListTest extends TestCase
         $this->assertTrue($deleted);
     }
 
-    /** @test */
-    public function trace_function_add_task_to_list_by_name_param_mitarea()
-    {
-        //PROFECIA
-//        $taskListMock = $this->prophesize(TaskList::class);
-//        $taskListMock->getListByName()->shouldBeCalled();
-//        $taskListMock->reveal();
+//    /** @test */
+//    public function trace_function_add_task_to_list_by_name_param_mitarea()
+//    {
+//        //PROFECIA
+////        $taskListMock = $this->prophesize(TaskList::class);
+////        $taskListMock->getListByName()->shouldBeCalled();
+////        $taskListMock->reveal();
+////
+////        $taskListMock->addTaskToList($this->nameTask, $this->nameList);
+//
+//        //STUB
+////        $taskListStub = $this->createStub(TaskList::class);
+////        $taskListStub->expects($this->once())->method('getListByName');
+////
+////        $taskListStub->addTaskToList($this->nameTask, $this->nameList);
+//
+//        //MOCK
+//        $taskListMock = $this->getMockBuilder(TaskList::class)->getMock();
+//        $taskListMock->expects($this->once())->method('getListByName')->willReturn(false);
 //
 //        $taskListMock->addTaskToList($this->nameTask, $this->nameList);
-
-        //STUB
-//        $taskListStub = $this->createStub(TaskList::class);
-//        $taskListStub->expects($this->once())->method('getListByName');
-//
-//        $taskListStub->addTaskToList($this->nameTask, $this->nameList);
-
-        //MOCK
-        $taskListMock = $this->getMockBuilder(TaskList::class)->getMock();
-        $taskListMock->expects($this->once())->method('getListByName')->willReturn(false);
-
-        $taskListMock->addTaskToList($this->nameTask, $this->nameList);
-    }
+//    }
 
 }
