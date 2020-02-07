@@ -10,7 +10,7 @@ class FizzBuzzChainFizz extends FizzBuzzAbstract
 {
     public function handle($number)
     {
-        if($number == 3) {
+        if($number % 3 === 0) {
             return "Fizz";
         }
 
