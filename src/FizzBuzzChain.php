@@ -12,6 +12,10 @@ class FizzBuzzChain
             throw new \Exception("$number no es un número");
         }
 
+        if($number == 3) {
+            return "Fizz";
+        }
+
         return $number;
     }
 
