@@ -1,9 +1,25 @@
 <?php
 namespace Core;
 
-class FizzBuzzAbstract implements FizzBuzzInterface
+abstract class FizzBuzzAbstract implements FizzBuzzInterface
 {
 
+    protected $nextHandler;
 
+    public function __construct($handler = null)
+    {
+        $this->nextHandler = $handler;
+    }
+
+    public function runHandlers($number)
+    {
+        $processed = $this->handle($number);
+
+        if ($processed === null && $this->nextHandler !== null) {
+            $processed = $this->nextHandler->handle($number);
+        }
+
+        return $processed;
+    }
 
 }

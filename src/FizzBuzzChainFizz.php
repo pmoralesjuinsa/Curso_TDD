@@ -6,7 +6,7 @@ namespace Src;
 
 use Core\FizzBuzzAbstract;
 
-class FizzBuzzChainFizz
+class FizzBuzzChainFizz extends FizzBuzzAbstract
 {
     public function handle($number)
     {

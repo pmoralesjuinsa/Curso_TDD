@@ -12,17 +12,9 @@ class FizzBuzzChain
             throw new \Exception("$number no es un número");
         }
 
-        $fizzBuzzChainFizz = new FizzBuzzChainFizz();
+        $fizzBuzzChains = new FizzBuzzChainFizz(new FizzBuzzChainNormal());
 
-        $result = $fizzBuzzChainFizz->handle($number);
-
-        if (!is_null($result)) {
-            return $result;
-        }
-
-        $fizzBuzzChainNormal = new FizzBuzzChainNormal();
-
-        return $fizzBuzzChainNormal->handle($number);
+        return $fizzBuzzChains->runHandlers($number);
     }
 
 }
