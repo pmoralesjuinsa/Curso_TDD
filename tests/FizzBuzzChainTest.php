@@ -19,6 +19,7 @@ class FizzBuzzChainTest extends TestCase
         $result = $fizzBuzzChain->passNumber(1);
 
         $this->assertEquals(1, $result);
+
     }
 
 }
