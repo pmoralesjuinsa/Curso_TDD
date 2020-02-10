@@ -26,22 +26,6 @@ class RomanNumeralTest extends TestCase
     }
 
     /** @test */
-    public function send_five_return_v()
-    {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(5);
-
-        $this->assertSame("V", $convertedNumber);
-    }
-
-    /** @test */
-    public function send_two_return_ii()
-    {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(2);
-
-        $this->assertSame("II", $convertedNumber);
-    }
-
-    /** @test */
     public function send_three_return_iii()
     {
         $convertedNumber = $this->romanNumeral->getRomanNumber(3);
@@ -49,5 +33,54 @@ class RomanNumeralTest extends TestCase
         $this->assertSame("III", $convertedNumber);
     }
 
+    /** @test */
+    public function send_four_return_iv()
+    {
+        $convertedNumber = $this->romanNumeral->getRomanNumber(4);
+
+        $this->assertSame("IV", $convertedNumber);
+    }
+
+
+    /** @test */
+    public function send_ninety_return_xcix()
+    {
+        $convertedNumber = $this->romanNumeral->getRomanNumber(99);
+
+        $this->assertSame("XCIX", $convertedNumber);
+    }
+
+
+    /** @test */
+    public function send_nine_hundred_and_fifty_return_cml()
+    {
+        $convertedNumber = $this->romanNumeral->getRomanNumber(950);
+
+        $this->assertSame("CML", $convertedNumber);
+    }
+
+    /** @test */
+    public function send_ix__return_nine()
+    {
+        $convertedNumber = $this->romanNumeral->getNumberFromRoman("IX");
+
+        $this->assertSame(9, $convertedNumber);
+    }
+
+    /** @test */
+    public function send_dxxi__return_521()
+    {
+        $convertedNumber = $this->romanNumeral->getNumberFromRoman("DXXI");
+
+        $this->assertSame(521, $convertedNumber);
+    }
+
+    /** @test */
+    public function send_mmmcmliv__return_3954()
+    {
+        $convertedNumber = $this->romanNumeral->getNumberFromRoman("MMMCMLIV");
+
+        $this->assertSame(3954, $convertedNumber);
+    }
 
 }

@@ -7,55 +7,70 @@ namespace Src;
 class RomanNumeral
 {
 
-    protected $restNumber;
-    protected $romanLetters = ["V", "I"];
-    protected $modNumbers = [5, 1];
+    protected $romans = array(
+        'M' => 1000,
+        'CM' => 900,
+        'D' => 500,
+        'CD' => 400,
+        'C' => 100,
+        'XC' => 90,
+        'L' => 50,
+        'XL' => 40,
+        'X' => 10,
+        'IX' => 9,
+        'V' => 5,
+        'IV' => 4,
+        'I' => 1,
+    );
+
+    protected $numerals = array(
+        1000 	=> 	'M',
+        900 	=> 	'CM',
+        500		=>	'D',
+        400		=>	'CD',
+        100		=>	'C',
+        90		=>	'XC',
+        50		=>	'L',
+        40		=>	'XL',
+        10		=>	'X',
+        9		=>	'IX',
+        5		=>	'V',
+        4		=>	'IV',
+        1		=>	'I'
+    );
+
 
     public function getRomanNumber($number)
     {
-        $letter = $this->convertNumberToLetter($number);
+        if (!is_int($number) || $number <= 0 || $number >= 4000)
+        {
+            return null;
+        }
 
-        return $letter;
-    }
+        $result = "";
 
-    /**
-     * @param $number
-     * @return string
-     */
-    public function convertNumberToLetter($number): string
-    {
-        $letter = '';
-        $this->restNumber = $number;
-
-
-        $letter = $this->assignLetter($number, $letter);
-
-
-        return $letter;
-    }
-
-    /**
-     * @param $i
-     * @param string $letter
-     * @return string
-     */
-    public function assignLetter($number, $letter): string
-    {
-
-        if($this->restNumber > 0) {
-            $result = $this->restNumber % 5;
-            if ($result === 0) {
-                $this->restNumber -= $number;
-                $letter .= "V";
-                $letter = $this->assignLetter($this->restNumber, $letter);
-            } elseif($result <= $number) {
-                $letter .= "I";
-                $this->restNumber -= 1;
-                $letter = $this->assignLetter($this->restNumber, $letter);
+        foreach ($this->numerals as $key => $value) {
+            while ($number >= $key) {
+                $result .= $value;
+                $number = $number - $key;
             }
         }
 
-        return $letter;
+        return $result;
+    }
+
+    public function getNumberFromRoman($roman)
+    {
+        $result = 0;
+
+        foreach ($this->romans as $key => $value) {
+            while (strpos($roman, $key) === 0) {
+                $result += $value;
+                $roman = substr($roman, strlen($key));
+            }
+        }
+
+        return $result;
     }
 
 }
