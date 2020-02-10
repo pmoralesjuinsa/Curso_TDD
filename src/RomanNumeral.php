@@ -40,7 +40,7 @@ class RomanNumeral
     );
 
 
-    public function getRomanNumber($number)
+    public function getRomanFromNumber($number)
     {
         if (!is_int($number) || $number <= 0 || $number >= 4000)
         {

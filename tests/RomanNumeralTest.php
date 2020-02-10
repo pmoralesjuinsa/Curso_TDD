@@ -20,7 +20,7 @@ class RomanNumeralTest extends TestCase
     /** @test */
     public function send_one_return_i()
     {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(1);
+        $convertedNumber = $this->romanNumeral->getRomanFromNumber(1);
 
         $this->assertSame("I", $convertedNumber);
     }
@@ -28,7 +28,7 @@ class RomanNumeralTest extends TestCase
     /** @test */
     public function send_three_return_iii()
     {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(3);
+        $convertedNumber = $this->romanNumeral->getRomanFromNumber(3);
 
         $this->assertSame("III", $convertedNumber);
     }
@@ -36,7 +36,7 @@ class RomanNumeralTest extends TestCase
     /** @test */
     public function send_four_return_iv()
     {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(4);
+        $convertedNumber = $this->romanNumeral->getRomanFromNumber(4);
 
         $this->assertSame("IV", $convertedNumber);
     }
@@ -45,7 +45,7 @@ class RomanNumeralTest extends TestCase
     /** @test */
     public function send_ninety_return_xcix()
     {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(99);
+        $convertedNumber = $this->romanNumeral->getRomanFromNumber(99);
 
         $this->assertSame("XCIX", $convertedNumber);
     }
@@ -54,7 +54,7 @@ class RomanNumeralTest extends TestCase
     /** @test */
     public function send_nine_hundred_and_fifty_return_cml()
     {
-        $convertedNumber = $this->romanNumeral->getRomanNumber(950);
+        $convertedNumber = $this->romanNumeral->getRomanFromNumber(950);
 
         $this->assertSame("CML", $convertedNumber);
     }
