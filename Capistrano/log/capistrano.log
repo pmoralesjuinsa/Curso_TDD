@@ -1,0 +1,523 @@
+# Logfile created on 2020-06-05 12:32:17 +0200 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-06-05 12:32:17 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3f1409fe] Running /usr/bin/env mkdir -p /tmp as qatest@qatest.grupojuinsa.es
+ DEBUG [3f1409fe] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3f1409fe] Finished in 1.023 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 100.0%
+  INFO [da4a707d] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh as qatest@qatest.grupojuinsa.es
+ DEBUG [da4a707d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh
+  INFO [da4a707d] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [670cd22f] Running /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD as qatest@qatest.grupojuinsa.es
+ DEBUG [670cd22f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD )
+ DEBUG [670cd22f] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754	HEAD
+  INFO [670cd22f] Finished in 1.386 seconds with exit status 0 (successful).
+  INFO [648d85e6] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [648d85e6] Command: /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+  INFO [648d85e6] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG [3ea3c5c7] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ] as qatest@qatest.grupojuinsa.es
+ DEBUG [3ea3c5c7] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ]
+ DEBUG [3ea3c5c7] Finished in 0.271 seconds with exit status 1 (failed).
+ DEBUG [0b6e6596] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo/HEAD ] as qatest@qatest.grupojuinsa.es
+ DEBUG [0b6e6596] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo/HEAD ]
+ DEBUG [0b6e6596] Finished in 0.294 seconds with exit status 1 (failed).
+ DEBUG [915c021e] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [915c021e] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro'" 1>&2; false; fi
+ DEBUG [915c021e] Finished in 0.279 seconds with exit status 0 (successful).
+  INFO [046d0f0e] Running /usr/bin/env git clone --mirror git@github.com:pmoralesjuinsa/Curso_TDD.git /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo as qatest@qatest.grupojuinsa.es
+ DEBUG [046d0f0e] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git clone --mirror git@github.com:pmoralesjuinsa/Curso_TDD.git /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo )
+ DEBUG [046d0f0e] 	Clonando en un repositorio vacío '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'...
+ DEBUG [046d0f0e] 	remote: Enumerating objects: 694, done.[K
+remote: Counting objects:   0% (1/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:   1% (7/694)[Kremote: Counting objects:   2% (14/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:   3% (21/694)[Kremote: Counting objects:   4% (28/694)[Kremote: Counting objects:   5% (35/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:   6% (42/694)[Kremote: Counting objects:   7% (49/694)[Kremote: Counting objects:   8% (56/694)[Kremote: Counting objects:   9% (63/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  10% (70/694)[Kremote: Counting objects:  11% (77/694)[Kremote: Counting objects:  12% (84/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  13% (91/694)[Kremote: Counting objects:  14% (98/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  15% (105/694)[Kremote: Counting objects:  16% (112/694)[Kremote: Counting objects:  17% (118/694)[Kremote: Counting objects:  18% (125/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  19% (132/694)[Kremote: Counting objects:  20% (139/694)[Kremote: Counting objects:  21% (146/694)[Kremote: Counting objects:  22% (153/694)[Kremote: Counting objects:  23% (160/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  24% (167/694)[Kremote: Counting objects:  25% (174/694)[Kremote: Counting objects:  26% (181/694)[Kremote: Counting objects:  27% (188/694)[Kremote: Counting objects:  28% (195/694)[Kremote: Counting objects:  29% (202/694)[Kremote: Counting objects:  30% (209/694)[Kremote: Counting objects:  31% (216/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  32% (223/694)[Kremote: Counting objects:  33% (230/694)[Kremote: Counting objects:  34% (236/694)[Kremote: Counting objects:  35% (243/694)[Kremote: Counting objects:  36% (250/694)[Kremote: Counting objects:  37% (257/694)[Kremote: Counting objects:  38% (264/694)[Kremote: Counting objects:  39% (271/694)[Kremote: Counting objects:  40% (278/694)[Kremote: Counting objects:  41% (285/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  42% (292/694)[Kremote: Counting objects:  43% (299/694)[Kremote: Counting objects:  44% (306/694)[Kremote: Counting objects:  45% (313/694)[Kremote: Counting objects:  46% (320/694)[Kremote: Counting objects:  47% (327/694)[Kremote: Counting objects:  48% (334/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  49% (341/694)[Kremote: Counting objects:  50% (347/694)[Kremote: Counting objects:  51% (354/694)[Kremote: Counting objects:  52% (361/694)[Kremote: Counting objects:  53% (368/694)[Kremote: Counting objects:  54% (375/694)[Kremote: Counting objects:  55% (382/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  56% (389/694)[Kremote: Counting objects:  57% (396/694)[Kremote: Counting objects:  58% (403/694)[Kremote: Counting objects:  59% (410/694)[Kremote: Counting objects:  60% (417/694)[Kremote: Counting objects:  61% (424/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  62% (431/694)[Kremote: Counting objects:  63% (438/694)[Kremote: Counting objects:  64% (445/694)[Kremote: Counting objects:  65% (452/694)[Kremote: Counting objects:  66% (459/694)[Kremote: Counting objects:  67% (465/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  68% (472/694)[Kremote: Counting objects:  69% (479/694)[Kremote: Counting objects:  70% (486/694)[Kremote: Counting objects:  71% (493/694)[Kremote: Counting objects:  72% (500/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  73% (507/694)[Kremote: Counting objects:  74% (514/694)[Kremote: Counting objects:  75% (521/694)[Kremote: Counting objects:  76% (528/694)[Kremote: Counting objects:  77% (535/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  78% (542/694)[Kremote: Counting objects:  79% (549/694)[Kremote: Counting objects:  80% (556/694)[Kremote: Counting objects:  81% (563/694)[Kremote: Counting objects:  82% (570/694)[Kremote: Counting objects:  83% (577/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  84% (583/694)[Kremote: Counting objects:  85% (590/694)[Kremote: Counting objects:  86% (597/694)[Kremote: Counting objects:  87% (604/694)[Kremote: Counting objects:  88% (611/694)[Kremote: Counting objects:  89% (618/694)[K
+ DEBUG [046d0f0e] 	remote: Counting objects:  90% (625/694)[Kremote: Counting objects:  91% (632/694)[Kremote: Counting objects:  92% (639/694)[Kremote: Counting objects:  93% (646/694)[Kremote: Counting objects:  94% (653/694)[Kremote: Counting objects:  95% (660/694)[Kremote: Counting objects:  96% (667/694)[Kremote: Counting objects:  97% (674/694)[Kremote: Counting objects:  98% (681/694)[Kremote: Counting objects:  99% (688/694)[Kremote: Counting objects: 100% (694/694)[Kremote: Counting objects: 100% (694/694), done.[K
+remote: Compressing objects:   0% (1/243)[Kremote: Compressing objects:   1% (3/243)[Kremote: Compressing objects:   2% (5/243)[Kremote: Compressing objects:   3% (8/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:   4% (10/243)[Kremote: Compressing objects:   5% (13/243)[Kremote: Compressing objects:   6% (15/243)[Kremote: Compressing objects:   7% (18/243)[Kremote: Compressing objects:   8% (20/243)[Kremote: Compressing objects:   9% (22/243)[Kremote: Compressing objects:  10% (25/243)[Kremote: Compressing objects:  11% (27/243)[Kremote: Compressing objects:  12% (30/243)[Kremote: Compressing objects:  13% (32/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  14% (35/243)[Kremote: Compressing objects:  15% (37/243)[Kremote: Compressing objects:  16% (39/243)[Kremote: Compressing objects:  17% (42/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  18% (44/243)[Kremote: Compressing objects:  19% (47/243)[Kremote: Compressing objects:  20% (49/243)[Kremote: Compressing objects:  21% (52/243)[Kremote: Compressing objects:  22% (54/243)[Kremote: Compressing objects:  23% (56/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  24% (59/243)[Kremote: Compressing objects:  25% (61/243)[Kremote: Compressing objects:  26% (64/243)[Kremote: Compressing objects:  27% (66/243)[Kremote: Compressing objects:  28% (69/243)[Kremote: Compressing objects:  29% (71/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  30% (73/243)[Kremote: Compressing objects:  31% (76/243)[Kremote: Compressing objects:  32% (78/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  33% (81/243)[Kremote: Compressing objects:  34% (83/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  35% (86/243)[Kremote: Compressing objects:  36% (88/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  37% (90/243)[Kremote: Compressing objects:  38% (93/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  39% (95/243)[Kremote: Compressing objects:  40% (98/243)[Kremote: Compressing objects:  41% (100/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  42% (103/243)[Kremote: Compressing objects:  43% (105/243)[Kremote: Compressing objects:  44% (107/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  45% (110/243)[Kremote: Compressing objects:  46% (112/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  47% (115/243)[Kremote: Compressing objects:  48% (117/243)[Kremote: Compressing objects:  49% (120/243)[Kremote: Compressing objects:  50% (122/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  51% (124/243)[Kremote: Compressing objects:  52% (127/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  53% (129/243)[Kremote: Compressing objects:  54% (132/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  55% (134/243)[Kremote: Compressing objects:  56% (137/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  57% (139/243)[Kremote: Compressing objects:  58% (141/243)[Kremote: Compressing objects:  59% (144/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  60% (146/243)[Kremote: Compressing objects:  61% (149/243)[Kremote: Compressing objects:  62% (151/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  63% (154/243)[Kremote: Compressing objects:  64% (156/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  65% (158/243)[Kremote: Compressing objects:  66% (161/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  67% (163/243)[Kremote: Compressing objects:  68% (166/243)[Kremote: Compressing objects:  69% (168/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  70% (171/243)[Kremote: Compressing objects:  71% (173/243)[Kremote: Compressing objects:  72% (175/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  73% (178/243)[Kremote: Compressing objects:  74% (180/243)[Kremote: Compressing objects:  75% (183/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  76% (185/243)[Kremote: Compressing objects:  77% (188/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  78% (190/243)[Kremote: Compressing objects:  79% (192/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  80% (195/243)[Kremote: Compressing objects:  81% (197/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  82% (200/243)[Kremote: Compressing objects:  83% (202/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  84% (205/243)[Kremote: Compressing objects:  85% (207/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  86% (209/243)[Kremote: Compressing objects:  87% (212/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  88% (214/243)[Kremote: Compressing objects:  89% (217/243)[Kremote: Compressing objects:  90% (219/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  91% (222/243)[Kremote: Compressing objects:  92% (224/243)[Kremote: Compressing objects:  93% (226/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  94% (229/243)[Kremote: Compressing objects:  95% (231/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  96% (234/243)[Kremote: Compressing objects:  97% (236/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects:  98% (239/243)[Kremote: Compressing objects:  99% (241/243)[Kremote: Compressing objects: 100% (243/243)[K
+ DEBUG [046d0f0e] 	remote: Compressing objects: 100% (243/243), done.[K
+ DEBUG [046d0f0e] 	Recibiendo objetos:   0% (1/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   1% (7/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   2% (14/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   3% (21/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   4% (28/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   5% (35/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   6% (42/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   7% (49/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   8% (56/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:   9% (63/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  10% (70/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  11% (77/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  12% (84/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  13% (91/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  14% (98/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  15% (105/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  16% (112/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  17% (118/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  18% (125/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  19% (132/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  20% (139/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  21% (146/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  22% (153/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  23% (160/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  24% (167/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  25% (174/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  26% (181/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  27% (188/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  28% (195/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  29% (202/694)   Recibiendo objetos:  30% (209/694)   Recibiendo objetos:  31% (216/694)   Recibiendo objetos:  32% (223/694)   Recibiendo objetos:  33% (230/694)   Recibiendo objetos:  34% (236/694)   Recibiendo objetos:  35% (243/694)   Recibiendo objetos:  36% (250/694)   Recibiendo objetos:  37% (257/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  38% (264/694)   Recibiendo objetos:  39% (271/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  40% (278/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  41% (285/694)   Recibiendo objetos:  42% (292/694)   Recibiendo objetos:  43% (299/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  44% (306/694)   Recibiendo objetos:  45% (313/694)   Recibiendo objetos:  46% (320/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  47% (327/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  48% (334/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  49% (341/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  50% (347/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  51% (354/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  52% (361/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  53% (368/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  54% (375/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  55% (382/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  56% (389/694)   Recibiendo objetos:  57% (396/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  58% (403/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  59% (410/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  60% (417/694)   Recibiendo objetos:  61% (424/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  62% (431/694)   Recibiendo objetos:  63% (438/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  64% (445/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  65% (452/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  66% (459/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  67% (465/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  68% (472/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  69% (479/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  70% (486/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  71% (493/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  72% (500/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  73% (507/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  74% (514/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  75% (521/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  76% (528/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  77% (535/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  78% (542/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  79% (549/694)   remote: Total 694 (delta 433), reused 661 (delta 400), pack-reused 0[K
+ DEBUG [046d0f0e] 	
+ DEBUG [046d0f0e] 	Recibiendo objetos:  80% (556/694)   Recibiendo objetos:  81% (563/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  82% (570/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  83% (577/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  84% (583/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  85% (590/694)   Recibiendo objetos:  86% (597/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  87% (604/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  88% (611/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  89% (618/694)   Recibiendo objetos:  90% (625/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  91% (632/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  92% (639/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  93% (646/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  94% (653/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  95% (660/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  96% (667/694)   Recibiendo objetos:  97% (674/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  98% (681/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos:  99% (688/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos: 100% (694/694)   
+ DEBUG [046d0f0e] 	Recibiendo objetos: 100% (694/694), 84.62 KiB | 541.00 KiB/s, listo.
+ DEBUG [046d0f0e] 	Resolviendo deltas:   0% (0/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:   1% (6/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:   2% (10/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:   3% (13/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:   5% (23/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  27% (120/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  28% (122/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  29% (126/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  39% (169/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  40% (177/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  42% (184/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  43% (190/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  44% (191/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  48% (211/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  51% (223/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  60% (262/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  66% (287/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  67% (293/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  71% (310/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  76% (331/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  77% (336/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  79% (344/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  84% (367/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  85% (371/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  88% (382/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  91% (397/433)   Resolviendo deltas:  92% (399/433)   Resolviendo deltas:  93% (405/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas:  96% (420/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas: 100% (433/433)   
+ DEBUG [046d0f0e] 	Resolviendo deltas: 100% (433/433), listo.
+  INFO [046d0f0e] Finished in 1.688 seconds with exit status 0 (successful).
+ DEBUG [83320033] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [83320033] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [83320033] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [0e9037a6] Running /usr/bin/env git remote set-url origin git@github.com:pmoralesjuinsa/Curso_TDD.git as qatest@qatest.grupojuinsa.es
+ DEBUG [0e9037a6] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git remote set-url origin git@github.com:pmoralesjuinsa/Curso_TDD.git )
+  INFO [0e9037a6] Finished in 0.276 seconds with exit status 0 (successful).
+  INFO [129c884b] Running /usr/bin/env git remote update --prune as qatest@qatest.grupojuinsa.es
+ DEBUG [129c884b] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [129c884b] 	Extrayendo origin
+  INFO [129c884b] Finished in 1.420 seconds with exit status 0 (successful).
+ DEBUG [13f2bbc7] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [13f2bbc7] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [13f2bbc7] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [a2010b30] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 as qatest@qatest.grupojuinsa.es
+ DEBUG [a2010b30] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 )
+  INFO [a2010b30] Finished in 0.277 seconds with exit status 0 (successful).
+  INFO [4c1f31d7] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 as qatest@qatest.grupojuinsa.es
+ DEBUG [4c1f31d7] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 )
+  INFO [4c1f31d7] Finished in 0.284 seconds with exit status 0 (successful).
+ DEBUG [8ed50f30] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [8ed50f30] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [8ed50f30] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [c264cfdc] Running /usr/bin/env git rev-list --max-count=1 master as qatest@qatest.grupojuinsa.es
+ DEBUG [c264cfdc] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c264cfdc] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754
+ DEBUG [c264cfdc] Finished in 0.281 seconds with exit status 0 (successful).
+ DEBUG [be434be5] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [be434be5] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220'" 1>&2; false; fi
+ DEBUG [be434be5] Finished in 0.296 seconds with exit status 0 (successful).
+  INFO [f83f1822] Running /usr/bin/env echo "3f35aead459f3acd7cbb519880bf0e9ac1e7e754" > REVISION as qatest@qatest.grupojuinsa.es
+ DEBUG [f83f1822] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 && /usr/bin/env echo "3f35aead459f3acd7cbb519880bf0e9ac1e7e754" > REVISION
+  INFO [f83f1822] Finished in 0.291 seconds with exit status 0 (successful).
+  INFO [e56abaf0] Running /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current as qatest@qatest.grupojuinsa.es
+ DEBUG [e56abaf0] Command: /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current
+  INFO [e56abaf0] Finished in 0.276 seconds with exit status 0 (successful).
+  INFO [1c58c52d] Running /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro as qatest@qatest.grupojuinsa.es
+ DEBUG [1c58c52d] Command: /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro
+  INFO [1c58c52d] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [f8efd74d] Running /usr/bin/env ls -x /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [f8efd74d] Command: /usr/bin/env ls -x /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+ DEBUG [f8efd74d] 	20200605103220
+ DEBUG [f8efd74d] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [d2c583f8] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [d2c583f8] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi
+ DEBUG [d2c583f8] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [c0e54a7c] Running /usr/bin/env echo "Branch master (at 3f35aead459f3acd7cbb519880bf0e9ac1e7e754) deployed as release 20200605103220 by pmorales" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log as qatest@qatest.grupojuinsa.es
+ DEBUG [c0e54a7c] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases && /usr/bin/env echo "Branch master (at 3f35aead459f3acd7cbb519880bf0e9ac1e7e754) deployed as release 20200605103220 by pmorales" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log
+  INFO [c0e54a7c] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-06-05 12:50:50 +0200 cap production deploy:rollback
+  INFO ---------------------------------------------------------------------------
+  INFO [bd589aaa] Running /usr/bin/env mkdir -p /tmp as qatest@qatest.grupojuinsa.es
+ DEBUG [bd589aaa] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bd589aaa] Finished in 1.049 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 100.0%
+  INFO [2b0ece62] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh as qatest@qatest.grupojuinsa.es
+ DEBUG [2b0ece62] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh
+  INFO [2b0ece62] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [03bfe8e3] Running /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD as qatest@qatest.grupojuinsa.es
+ DEBUG [03bfe8e3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD )
+ DEBUG [03bfe8e3] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754	HEAD
+  INFO [03bfe8e3] Finished in 1.373 seconds with exit status 0 (successful).
+  INFO [2ee96c6f] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [2ee96c6f] Command: /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+  INFO [2ee96c6f] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [2dfb8aa1] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ] as qatest@qatest.grupojuinsa.es
+ DEBUG [2dfb8aa1] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ]
+ DEBUG [2dfb8aa1] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [92a7ae27] Running /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null as qatest@qatest.grupojuinsa.es
+ DEBUG [92a7ae27] Command: /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null
+ DEBUG [92a7ae27] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754
+ DEBUG [92a7ae27] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [6dae4156] Running /usr/bin/env ls -xt /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [6dae4156] Command: /usr/bin/env ls -xt /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+ DEBUG [6dae4156] 	20200605103220
+ DEBUG [6dae4156] Finished in 0.270 seconds with exit status 0 (successful).
+ ERROR There are no older releases to rollback to
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-06-05 12:51:03 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [535d6fcd] Running /usr/bin/env mkdir -p /tmp as qatest@qatest.grupojuinsa.es
+ DEBUG [535d6fcd] Command: /usr/bin/env mkdir -p /tmp
+  INFO [535d6fcd] Finished in 0.974 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 100.0%
+  INFO [2afb3184] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh as qatest@qatest.grupojuinsa.es
+ DEBUG [2afb3184] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh
+  INFO [2afb3184] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [33a9274c] Running /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD as qatest@qatest.grupojuinsa.es
+ DEBUG [33a9274c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD )
+ DEBUG [33a9274c] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754	HEAD
+  INFO [33a9274c] Finished in 1.423 seconds with exit status 0 (successful).
+  INFO [4a9a4dd7] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [4a9a4dd7] Command: /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+  INFO [4a9a4dd7] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [f6e5f1f9] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ] as qatest@qatest.grupojuinsa.es
+ DEBUG [f6e5f1f9] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ]
+ DEBUG [f6e5f1f9] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [bd076ba3] Running /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null as qatest@qatest.grupojuinsa.es
+ DEBUG [bd076ba3] Command: /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null
+ DEBUG [bd076ba3] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754
+ DEBUG [bd076ba3] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG [4cb7aabc] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo/HEAD ] as qatest@qatest.grupojuinsa.es
+ DEBUG [4cb7aabc] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo/HEAD ]
+ DEBUG [4cb7aabc] Finished in 0.265 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo
+ DEBUG [63a2eb25] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [63a2eb25] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [63a2eb25] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [49a30375] Running /usr/bin/env git remote set-url origin git@github.com:pmoralesjuinsa/Curso_TDD.git as qatest@qatest.grupojuinsa.es
+ DEBUG [49a30375] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git remote set-url origin git@github.com:pmoralesjuinsa/Curso_TDD.git )
+  INFO [49a30375] Finished in 0.280 seconds with exit status 0 (successful).
+  INFO [2e784207] Running /usr/bin/env git remote update --prune as qatest@qatest.grupojuinsa.es
+ DEBUG [2e784207] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2e784207] 	Extrayendo origin
+  INFO [2e784207] Finished in 1.446 seconds with exit status 0 (successful).
+ DEBUG [24076167] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [24076167] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [24076167] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [5fc2554d] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 as qatest@qatest.grupojuinsa.es
+ DEBUG [5fc2554d] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 )
+  INFO [5fc2554d] Finished in 0.284 seconds with exit status 0 (successful).
+  INFO [64637597] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 as qatest@qatest.grupojuinsa.es
+ DEBUG [64637597] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 )
+  INFO [64637597] Finished in 0.283 seconds with exit status 0 (successful).
+ DEBUG [a993120e] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [a993120e] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [a993120e] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [38640170] Running /usr/bin/env git rev-list --max-count=1 master as qatest@qatest.grupojuinsa.es
+ DEBUG [38640170] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [38640170] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754
+ DEBUG [38640170] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [99f8750e] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [99f8750e] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107'" 1>&2; false; fi
+ DEBUG [99f8750e] Finished in 0.264 seconds with exit status 0 (successful).
+  INFO [fec6faba] Running /usr/bin/env echo "3f35aead459f3acd7cbb519880bf0e9ac1e7e754" > REVISION as qatest@qatest.grupojuinsa.es
+ DEBUG [fec6faba] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 && /usr/bin/env echo "3f35aead459f3acd7cbb519880bf0e9ac1e7e754" > REVISION
+  INFO [fec6faba] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [db97d7d3] Running /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current as qatest@qatest.grupojuinsa.es
+ DEBUG [db97d7d3] Command: /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current
+  INFO [db97d7d3] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [b9ccd7cd] Running /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro as qatest@qatest.grupojuinsa.es
+ DEBUG [b9ccd7cd] Command: /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro
+  INFO [b9ccd7cd] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [46cceb08] Running /usr/bin/env ls -x /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [46cceb08] Command: /usr/bin/env ls -x /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+ DEBUG [46cceb08] 	20200605103220	20200605105107
+ DEBUG [46cceb08] Finished in 0.281 seconds with exit status 0 (successful).
+ DEBUG [b4d86b85] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [b4d86b85] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi
+ DEBUG [b4d86b85] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [d47f356c] Running /usr/bin/env echo "Branch master (at 3f35aead459f3acd7cbb519880bf0e9ac1e7e754) deployed as release 20200605105107 by pmorales" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log as qatest@qatest.grupojuinsa.es
+ DEBUG [d47f356c] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases && /usr/bin/env echo "Branch master (at 3f35aead459f3acd7cbb519880bf0e9ac1e7e754) deployed as release 20200605105107 by pmorales" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log
+  INFO [d47f356c] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-06-05 12:51:35 +0200 cap production deploy:rollback
+  INFO ---------------------------------------------------------------------------
+  INFO [9979abec] Running /usr/bin/env mkdir -p /tmp as qatest@qatest.grupojuinsa.es
+ DEBUG [9979abec] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9979abec] Finished in 0.985 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 100.0%
+  INFO [d18339e6] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh as qatest@qatest.grupojuinsa.es
+ DEBUG [d18339e6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh
+  INFO [d18339e6] Finished in 0.276 seconds with exit status 0 (successful).
+  INFO [39324bb5] Running /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD as qatest@qatest.grupojuinsa.es
+ DEBUG [39324bb5] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git ls-remote git@github.com:pmoralesjuinsa/Curso_TDD.git HEAD )
+ DEBUG [39324bb5] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754	HEAD
+  INFO [39324bb5] Finished in 1.383 seconds with exit status 0 (successful).
+  INFO [c0cb57b1] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [c0cb57b1] Command: /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+  INFO [c0cb57b1] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [b1835051] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ] as qatest@qatest.grupojuinsa.es
+ DEBUG [b1835051] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ]
+ DEBUG [b1835051] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG [555c6f28] Running /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null as qatest@qatest.grupojuinsa.es
+ DEBUG [555c6f28] Command: /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null
+ DEBUG [555c6f28] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754
+ DEBUG [555c6f28] Finished in 0.291 seconds with exit status 0 (successful).
+ DEBUG [802eb258] Running /usr/bin/env ls -xt /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [802eb258] Command: /usr/bin/env ls -xt /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+ DEBUG [802eb258] 	20200605105107	20200605103220
+ DEBUG [802eb258] Finished in 0.279 seconds with exit status 0 (successful).
+  INFO [cfe2ee80] Running /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current as qatest@qatest.grupojuinsa.es
+ DEBUG [cfe2ee80] Command: /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605103220 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current
+  INFO [cfe2ee80] Finished in 0.274 seconds with exit status 0 (successful).
+  INFO [b7a9c29d] Running /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro as qatest@qatest.grupojuinsa.es
+ DEBUG [b7a9c29d] Command: /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro
+  INFO [b7a9c29d] Finished in 0.283 seconds with exit status 0 (successful).
+ DEBUG [586f46cf] Running /usr/bin/env ls -xt /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [586f46cf] Command: /usr/bin/env ls -xt /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+ DEBUG [586f46cf] 	20200605105107	20200605103220
+ DEBUG [586f46cf] Finished in 0.290 seconds with exit status 0 (successful).
+ DEBUG [6be6a272] Running [ `readlink /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current` != /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 ] as qatest@qatest.grupojuinsa.es
+ DEBUG [6be6a272] Command: [ `readlink /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current` != /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 ]
+ DEBUG [6be6a272] Finished in 0.285 seconds with exit status 0 (successful).
+  INFO [998b1d75] Running /usr/bin/env tar -czf /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/rolled-back-release-20200605105107.tar.gz /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 as qatest@qatest.grupojuinsa.es
+ DEBUG [998b1d75] Command: /usr/bin/env tar -czf /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/rolled-back-release-20200605105107.tar.gz /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107
+ DEBUG [998b1d75] 	tar: Eliminando la `/' inicial de los nombres
+  INFO [998b1d75] Finished in 0.320 seconds with exit status 0 (successful).
+  INFO [fb51094f] Running /usr/bin/env rm -rf /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107 as qatest@qatest.grupojuinsa.es
+ DEBUG [fb51094f] Command: /usr/bin/env rm -rf /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605105107
+  INFO [fb51094f] Finished in 0.277 seconds with exit status 0 (successful).
+ DEBUG [4c11ebd8] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [4c11ebd8] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi
+ DEBUG [4c11ebd8] Finished in 0.274 seconds with exit status 0 (successful).
+  INFO [5aa9a6d7] Running /usr/bin/env echo "pmorales rolled back to release 20200605103220" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log as qatest@qatest.grupojuinsa.es
+ DEBUG [5aa9a6d7] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases && /usr/bin/env echo "pmorales rolled back to release 20200605103220" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log
+  INFO [5aa9a6d7] Finished in 0.279 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-06-05 13:05:12 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cb7ae97c] Running /usr/bin/env mkdir -p /tmp as qatest@qatest.grupojuinsa.es
+ DEBUG [cb7ae97c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cb7ae97c] Finished in 0.959 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh 100.0%
+  INFO [10283b82] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh as qatest@qatest.grupojuinsa.es
+ DEBUG [10283b82] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh
+  INFO [10283b82] Finished in 0.295 seconds with exit status 0 (successful).
+  INFO [ea5a271c] Running /usr/bin/env git ls-remote git@bitbucket.org:grupojuinsatech/php-microsoft-teams-connector.git HEAD as qatest@qatest.grupojuinsa.es
+ DEBUG [ea5a271c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:grupojuinsatech/php-microsoft-teams-connector.git HEAD )
+ DEBUG [ea5a271c] 	f5159a1f3271f01e4da0862060c6fed157c8e67d	HEAD
+  INFO [ea5a271c] Finished in 2.066 seconds with exit status 0 (successful).
+  INFO [c4748d45] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [c4748d45] Command: /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/shared /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+  INFO [c4748d45] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [db2193d1] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ] as qatest@qatest.grupojuinsa.es
+ DEBUG [db2193d1] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION ]
+ DEBUG [db2193d1] Finished in 0.266 seconds with exit status 0 (successful).
+ DEBUG [e1ac1db7] Running /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null as qatest@qatest.grupojuinsa.es
+ DEBUG [e1ac1db7] Command: /usr/bin/env cat /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/current/REVISION 2>/dev/null
+ DEBUG [e1ac1db7] 	3f35aead459f3acd7cbb519880bf0e9ac1e7e754
+ DEBUG [e1ac1db7] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG [0e95da54] Running [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo/HEAD ] as qatest@qatest.grupojuinsa.es
+ DEBUG [0e95da54] Command: [ -f /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo/HEAD ]
+ DEBUG [0e95da54] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo
+ DEBUG [51ab08f0] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [51ab08f0] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [51ab08f0] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [e19426ca] Running /usr/bin/env git remote set-url origin git@bitbucket.org:grupojuinsatech/php-microsoft-teams-connector.git as qatest@qatest.grupojuinsa.es
+ DEBUG [e19426ca] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git remote set-url origin git@bitbucket.org:grupojuinsatech/php-microsoft-teams-connector.git )
+  INFO [e19426ca] Finished in 0.296 seconds with exit status 0 (successful).
+  INFO [c6d1eb89] Running /usr/bin/env git remote update --prune as qatest@qatest.grupojuinsa.es
+ DEBUG [c6d1eb89] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c6d1eb89] 	Extrayendo origin
+ DEBUG [c6d1eb89] 	Desde bitbucket.org:grupojuinsatech/php-microsoft-teams-connector
+ DEBUG [c6d1eb89] 	 - [eliminado]       (nada)     -> develop
+ DEBUG [c6d1eb89] 	warning: no hay commits comunes
+ DEBUG [c6d1eb89] 	remote: Counting objects: 15, done.[K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:   7% (1/14)   [Kremote: Compressing objects:  14% (2/14)   [Kremote: Compressing objects:  21% (3/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  28% (4/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  35% (5/14)   [Kremote: Compressing objects:  42% (6/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  50% (7/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  57% (8/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  64% (9/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  71% (10/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  78% (11/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  85% (12/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects:  92% (13/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects: 100% (14/14)   [K
+ DEBUG [c6d1eb89] 	remote: Compressing objects: 100% (14/14), done.[K
+ DEBUG [c6d1eb89] 	remote: Total 15 (delta 3), reused 0 (delta 0)[K
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:   6% (1/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  13% (2/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  20% (3/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  26% (4/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  33% (5/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  40% (6/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  46% (7/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  53% (8/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  60% (9/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  66% (10/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  73% (11/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  80% (12/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  86% (13/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos:  93% (14/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos: 100% (15/15)   
+ DEBUG [c6d1eb89] 	Desempaquetando objetos: 100% (15/15), listo.
+ DEBUG [c6d1eb89] 	 + 3f35aea...f5159a1 master     -> master  (actualización forzada)
+ DEBUG [c6d1eb89] 	 * [nuevo tag]       v1.0.0     -> v1.0.0
+ DEBUG [c6d1eb89] 	 * [nuevo tag]       v1.0.1     -> v1.0.1
+ DEBUG [c6d1eb89] 	
+  INFO [c6d1eb89] Finished in 2.257 seconds with exit status 0 (successful).
+ DEBUG [42e83bfa] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [42e83bfa] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [42e83bfa] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [9f03eafc] Running /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 as qatest@qatest.grupojuinsa.es
+ DEBUG [9f03eafc] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env mkdir -p /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 )
+  INFO [9f03eafc] Finished in 0.282 seconds with exit status 0 (successful).
+  INFO [8d1df125] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 as qatest@qatest.grupojuinsa.es
+ DEBUG [8d1df125] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 )
+  INFO [8d1df125] Finished in 0.285 seconds with exit status 0 (successful).
+ DEBUG [70bcd4f4] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [70bcd4f4] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo'" 1>&2; false; fi
+ DEBUG [70bcd4f4] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [22f18327] Running /usr/bin/env git rev-list --max-count=1 master as qatest@qatest.grupojuinsa.es
+ DEBUG [22f18327] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pruebas_Capistrano_QATEST-production-pmorales.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [22f18327] 	f5159a1f3271f01e4da0862060c6fed157c8e67d
+ DEBUG [22f18327] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [baa6439d] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [baa6439d] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517'" 1>&2; false; fi
+ DEBUG [baa6439d] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [930a0e5e] Running /usr/bin/env echo "f5159a1f3271f01e4da0862060c6fed157c8e67d" > REVISION as qatest@qatest.grupojuinsa.es
+ DEBUG [930a0e5e] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 && /usr/bin/env echo "f5159a1f3271f01e4da0862060c6fed157c8e67d" > REVISION
+  INFO [930a0e5e] Finished in 0.275 seconds with exit status 0 (successful).
+  INFO [43000906] Running /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current as qatest@qatest.grupojuinsa.es
+ DEBUG [43000906] Command: /usr/bin/env ln -s /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/20200605110517 /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current
+  INFO [43000906] Finished in 0.281 seconds with exit status 0 (successful).
+  INFO [d66872fe] Running /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro as qatest@qatest.grupojuinsa.es
+ DEBUG [d66872fe] Command: /usr/bin/env mv /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases/current /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro
+  INFO [d66872fe] Finished in 0.288 seconds with exit status 0 (successful).
+ DEBUG [597ac24e] Running /usr/bin/env ls -x /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases as qatest@qatest.grupojuinsa.es
+ DEBUG [597ac24e] Command: /usr/bin/env ls -x /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases
+ DEBUG [597ac24e] 	20200605103220	20200605110517
+ DEBUG [597ac24e] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [01a7419d] Running if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi as qatest@qatest.grupojuinsa.es
+ DEBUG [01a7419d] Command: if test ! -d /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases; then echo "Directory does not exist '/var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases'" 1>&2; false; fi
+ DEBUG [01a7419d] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [faca6146] Running /usr/bin/env echo "Branch master (at f5159a1f3271f01e4da0862060c6fed157c8e67d) deployed as release 20200605110517 by pmorales" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log as qatest@qatest.grupojuinsa.es
+ DEBUG [faca6146] Command: cd /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/releases && /usr/bin/env echo "Branch master (at f5159a1f3271f01e4da0862060c6fed157c8e67d) deployed as release 20200605110517 by pmorales" >> /var/www/vhosts/qatest.grupojuinsa.es/Capistrano/Pedro/revisions.log
+  INFO [faca6146] Finished in 0.301 seconds with exit status 0 (successful).
